@@ -16,7 +16,8 @@ export type TaxCreditId =
 	| 'co_tax_credit_coctc'
 	| 'co_tax_credit_eitc'
 	| 'co_tax_credit_coeitc'
-	| 'co_tax_credit_fatc';
+	| 'co_tax_credit_fatc'
+	| 'co_tax_credit_care_worker';
 
 export default class MfbApi {
 	// provide a default age,
@@ -34,7 +35,8 @@ export default class MfbApi {
 		'co_tax_credit_coctc',
 		'co_tax_credit_eitc',
 		'co_tax_credit_coeitc',
-		'co_tax_credit_fatc'
+		'co_tax_credit_fatc',
+		'co_tax_credit_care_worker'
 	];
 
 	uuid: string | null;
@@ -42,6 +44,8 @@ export default class MfbApi {
 	isMarried: boolean;
 	childAges: number[];
 	incomes: IncomeType[];
+	headIsCareWorker: boolean;
+	spouseIsCareWorker: boolean;
 
 	constructor() {
 		this.isMarried = false;
@@ -49,12 +53,22 @@ export default class MfbApi {
 		this.incomes = [];
 		this.uuid = null;
 		this.id = null;
+		this.headIsCareWorker = false;
+		this.spouseIsCareWorker = false;
 	}
 
-	updateData(isMarried: boolean, childAges: number[], incomes: IncomeType[]) {
+	updateData(
+		isMarried: boolean,
+		childAges: number[],
+		incomes: IncomeType[],
+		headIsCareWorker: boolean = false,
+		spouseIsCareWorker: boolean = false
+	) {
 		this.isMarried = isMarried;
 		this.childAges = childAges;
 		this.incomes = incomes;
+		this.headIsCareWorker = headIsCareWorker;
+		this.spouseIsCareWorker = spouseIsCareWorker;
 	}
 
 	async updateScreen() {
@@ -105,14 +119,18 @@ export default class MfbApi {
 
 		const householdMembers: any[] = [];
 
-		householdMembers.push(this.#createPerson(this.incomes, 'headOfHousehold'));
+		householdMembers.push(
+			this.#createPerson(this.incomes, 'headOfHousehold', this.DEFAULT_AGE, this.headIsCareWorker)
+		);
 
 		if (this.isMarried) {
-			householdMembers.push(this.#createPerson([], 'spouse'));
+			householdMembers.push(
+				this.#createPerson([], 'spouse', this.DEFAULT_AGE, this.spouseIsCareWorker)
+			);
 		}
 
 		for (const age of this.childAges) {
-			householdMembers.push(this.#createPerson([], 'child', age));
+			householdMembers.push(this.#createPerson([], 'child', age, false));
 		}
 
 		const data: any = {
@@ -127,11 +145,17 @@ export default class MfbApi {
 		return data;
 	}
 
-	#createPerson(incomes: IncomeType[], relationship: string, age: number = this.DEFAULT_AGE) {
+	#createPerson(
+		incomes: IncomeType[],
+		relationship: string,
+		age: number = this.DEFAULT_AGE,
+		isCareWorker: boolean = false
+	) {
 		return {
 			relationship: relationship,
 			age: age,
 			hasIncome: incomes.length > 0,
+			is_care_worker: isCareWorker,
 			income_streams: incomes.map((income) => {
 				return {
 					type: 'wages',

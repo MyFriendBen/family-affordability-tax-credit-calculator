@@ -10,9 +10,15 @@
 
 	let taxCredits: TaxCredit[] = [];
 
-	async function handleSubmit(isMarried: boolean, childAges: number[], incomes: IncomeType[]) {
+	async function handleSubmit(
+		isMarried: boolean,
+		childAges: number[],
+		incomes: IncomeType[],
+		headIsCareWorker: boolean,
+		spouseIsCareWorker: boolean
+	) {
 		taxCredits = [];
-		mfbApi.updateData(isMarried, childAges, incomes);
+		mfbApi.updateData(isMarried, childAges, incomes, headIsCareWorker, spouseIsCareWorker);
 		await mfbApi.updateScreen();
 		taxCredits = await mfbApi.getResults();
 	}

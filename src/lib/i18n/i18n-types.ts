@@ -150,6 +150,20 @@ type RootTranslation = {
 				 */
 				ADD_INCOME: string
 			}
+			CARE_WORKER: {
+				/**
+				 * D​o​ ​y​o​u​ ​w​o​r​k​ ​a​s​ ​a​ ​c​a​r​e​ ​w​o​r​k​e​r​?
+				 */
+				QUESTION: string
+				/**
+				 * D​o​e​s​ ​y​o​u​r​ ​s​p​o​u​s​e​ ​w​o​r​k​ ​a​s​ ​a​ ​c​a​r​e​ ​w​o​r​k​e​r​?
+				 */
+				SPOUSE_QUESTION: string
+				/**
+				 * *​*​W​h​a​t​ ​i​s​ ​a​ ​c​a​r​e​ ​w​o​r​k​e​r​?​*​*​ ​C​a​r​e​ ​w​o​r​k​e​r​s​ ​i​n​c​l​u​d​e​ ​c​h​i​l​d​ ​c​a​r​e​ ​p​r​o​v​i​d​e​r​s​,​ ​h​o​m​e​ ​h​e​a​l​t​h​ ​a​i​d​e​s​,​ ​p​e​r​s​o​n​a​l​ ​c​a​r​e​ ​a​i​d​e​s​,​ ​a​n​d​ ​n​u​r​s​i​n​g​ ​a​s​s​i​s​t​a​n​t​s​.​ ​T​h​i​s​ ​a​l​s​o​ ​i​n​c​l​u​d​e​s​ ​*​*​f​a​m​i​l​y​ ​m​e​m​b​e​r​s​,​ ​f​r​i​e​n​d​s​,​ ​o​r​ ​n​e​i​g​h​b​o​r​s​*​*​ ​w​h​o​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​c​h​i​l​d​r​e​n​ ​a​g​e​ ​5​ ​o​r​ ​y​o​u​n​g​e​r​ ​(​7​2​0​+​ ​h​o​u​r​s​ ​p​e​r​ ​y​e​a​r​)​.
+				 */
+				HELP_TEXT: string
+			}
 		}
 		YES_OR_NO_INPUT: {
 			/**
@@ -215,6 +229,10 @@ type RootTranslation = {
 			 * C​o​l​o​r​a​d​o​ ​F​a​m​i​l​y​ ​A​f​f​o​r​d​a​b​i​l​i​t​y​ ​T​a​x​ ​C​r​e​d​i​t​:
 			 */
 			co_tax_credit_fatc: string
+			/**
+			 * C​o​l​o​r​a​d​o​ ​C​a​r​e​ ​W​o​r​k​e​r​ ​T​a​x​ ​C​r​e​d​i​t​:
+			 */
+			co_tax_credit_care_worker: string
 		}
 		REQUIRED_DOCUMENTS: {
 			/**
@@ -292,7 +310,7 @@ type RootTranslation = {
 			 */
 			TITLE: string
 			/**
-			 * T​o​ ​s​e​e​ ​w​h​a​t​ ​o​t​h​e​r​ ​b​e​n​e​f​i​t​s​ ​y​o​u​ ​m​a​y​ ​b​e​ ​e​l​i​g​i​b​l​e​,​ ​c​l​i​c​k​ ​t​h​e​ ​b​u​t​t​o​n​ ​b​e​l​o​w​ ​t​o​ ​v​i​s​i​t​ ​M​y​F​r​i​e​n​d​B​e​n​.
+			 * T​o​ ​s​e​e​ ​w​h​a​t​ ​o​t​h​e​r​ ​b​e​n​e​f​i​t​s​ ​y​o​u​ ​m​a​y​ ​b​e​ ​e​l​i​g​i​b​l​e​ ​f​o​r​,​ ​c​l​i​c​k​ ​t​h​e​ ​b​u​t​t​o​n​ ​b​e​l​o​w​ ​t​o​ ​v​i​s​i​t​ ​M​y​F​r​i​e​n​d​B​e​n​.
 			 */
 			DESCRIPTION: string
 			/**
@@ -438,6 +456,20 @@ export type TranslationFunctions = {
 				 */
 				ADD_INCOME: () => LocalizedString
 			}
+			CARE_WORKER: {
+				/**
+				 * Do you work as a care worker?
+				 */
+				QUESTION: () => LocalizedString
+				/**
+				 * Does your spouse work as a care worker?
+				 */
+				SPOUSE_QUESTION: () => LocalizedString
+				/**
+				 * **What is a care worker?** Care workers include child care providers, home health aides, personal care aides, and nursing assistants. This also includes **family members, friends, or neighbors** who regularly care for children age 5 or younger (720+ hours per year).
+				 */
+				HELP_TEXT: () => LocalizedString
+			}
 		}
 		YES_OR_NO_INPUT: {
 			/**
@@ -500,6 +532,10 @@ export type TranslationFunctions = {
 			 * Colorado Family Affordability Tax Credit:
 			 */
 			co_tax_credit_fatc: () => LocalizedString
+			/**
+			 * Colorado Care Worker Tax Credit:
+			 */
+			co_tax_credit_care_worker: () => LocalizedString
 		}
 		REQUIRED_DOCUMENTS: {
 			/**
@@ -577,7 +613,7 @@ export type TranslationFunctions = {
 			 */
 			TITLE: () => LocalizedString
 			/**
-			 * To see what other benefits you may be eligible, click the button below to visit MyFriendBen.
+			 * To see what other benefits you may be eligible for, click the button below to visit MyFriendBen.
 			 */
 			DESCRIPTION: () => LocalizedString
 			/**
