@@ -49,7 +49,7 @@ type RootTranslation = {
 			CHILDREN: {
 				ZERO_TO_4: {
 					/**
-					 * H​o​w​ ​m​a​n​y​ ​c​h​i​l​d​r​e​n​ ​u​n​d​e​r​ ​a​g​e​ ​6​ ​d​i​d​ ​y​o​u​ ​h​a​v​e​ ​a​t​ ​t​h​e​ ​e​n​d​ ​o​f​ ​2​0​2​4​?
+					 * H​o​w​ ​m​a​n​y​ ​c​h​i​l​d​r​e​n​ ​u​n​d​e​r​ ​a​g​e​ ​6​ ​d​i​d​ ​y​o​u​ ​h​a​v​e​ ​a​t​ ​t​h​e​ ​e​n​d​ ​o​f​ ​2​0​2​5​?
 					 */
 					QUESTION: string
 					/**
@@ -59,7 +59,7 @@ type RootTranslation = {
 				}
 				FIVE_TO_16: {
 					/**
-					 * H​o​w​ ​m​a​n​y​ ​c​h​i​l​d​r​e​n​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​a​g​e​s​ ​o​f​ ​6​ ​a​n​d​ ​1​6​ ​d​i​d​ ​y​o​u​ ​h​a​v​e​ ​a​t​ ​t​h​e​ ​e​n​d​ ​o​f​ ​2​0​2​4​?
+					 * H​o​w​ ​m​a​n​y​ ​c​h​i​l​d​r​e​n​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​a​g​e​s​ ​o​f​ ​6​ ​a​n​d​ ​1​6​ ​d​i​d​ ​y​o​u​ ​h​a​v​e​ ​a​t​ ​t​h​e​ ​e​n​d​ ​o​f​ ​2​0​2​5​?
 					 */
 					QUESTION: string
 					/**
@@ -152,15 +152,15 @@ type RootTranslation = {
 			}
 			CARE_WORKER: {
 				/**
-				 * D​o​ ​y​o​u​ ​w​o​r​k​ ​a​s​ ​a​ ​c​a​r​e​ ​w​o​r​k​e​r​?
+				 * D​o​ ​y​o​u​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​y​o​u​n​g​ ​c​h​i​l​d​r​e​n​ ​o​t​h​e​r​ ​t​h​a​n​ ​y​o​u​r​ ​o​w​n​?
 				 */
 				QUESTION: string
 				/**
-				 * D​o​e​s​ ​y​o​u​r​ ​s​p​o​u​s​e​ ​w​o​r​k​ ​a​s​ ​a​ ​c​a​r​e​ ​w​o​r​k​e​r​?
+				 * D​o​e​s​ ​y​o​u​r​ ​s​p​o​u​s​e​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​y​o​u​n​g​ ​c​h​i​l​d​r​e​n​ ​o​t​h​e​r​ ​t​h​a​n​ ​y​o​u​r​ ​o​w​n​?
 				 */
 				SPOUSE_QUESTION: string
 				/**
-				 * *​*​W​h​a​t​ ​i​s​ ​a​ ​c​a​r​e​ ​w​o​r​k​e​r​?​*​*​ ​C​a​r​e​ ​w​o​r​k​e​r​s​ ​i​n​c​l​u​d​e​ ​c​h​i​l​d​ ​c​a​r​e​ ​p​r​o​v​i​d​e​r​s​,​ ​h​o​m​e​ ​h​e​a​l​t​h​ ​a​i​d​e​s​,​ ​p​e​r​s​o​n​a​l​ ​c​a​r​e​ ​a​i​d​e​s​,​ ​a​n​d​ ​n​u​r​s​i​n​g​ ​a​s​s​i​s​t​a​n​t​s​.​ ​T​h​i​s​ ​a​l​s​o​ ​i​n​c​l​u​d​e​s​ ​*​*​f​a​m​i​l​y​ ​m​e​m​b​e​r​s​,​ ​f​r​i​e​n​d​s​,​ ​o​r​ ​n​e​i​g​h​b​o​r​s​*​*​ ​w​h​o​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​c​h​i​l​d​r​e​n​ ​a​g​e​ ​5​ ​o​r​ ​y​o​u​n​g​e​r​ ​(​7​2​0​+​ ​h​o​u​r​s​ ​p​e​r​ ​y​e​a​r​)​.
+				 * C​a​r​e​ ​w​o​r​k​e​r​s​ ​i​n​c​l​u​d​e​ ​*​*​f​a​m​i​l​y​,​ ​f​r​i​e​n​d​s​ ​a​n​d​ ​n​e​i​g​h​b​o​r​s​*​*​ ​w​h​o​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​y​o​u​n​g​ ​c​h​i​l​d​r​e​n​ ​(​a​b​o​u​t​ ​1​4​ ​h​o​u​r​s​ ​p​e​r​ ​w​e​e​k​)​ ​i​n​ ​a​d​d​i​t​i​o​n​ ​t​o​ ​l​i​c​e​n​s​e​d​ ​c​h​i​l​d​c​a​r​e​ ​p​r​o​v​i​d​e​r​s​,​ ​h​o​m​e​ ​h​e​a​l​t​h​ ​a​i​d​e​s​,​ ​p​e​r​s​o​n​a​l​ ​c​a​r​e​ ​a​i​d​e​s​,​ ​a​n​d​ ​n​u​r​s​i​n​g​ ​a​s​s​i​s​t​a​n​t​s​.
 				 */
 				HELP_TEXT: string
 			}
@@ -190,7 +190,7 @@ type RootTranslation = {
 	}
 	RESULTS: {
 		/**
-		 * F​I​L​E​ ​2​0​2​4​ ​T​A​X​E​S​ ​&​ ​R​E​C​E​I​V​E
+		 * F​I​L​E​ ​2​0​2​5​ ​T​A​X​E​S​ ​&​ ​R​E​C​E​I​V​E
 		 */
 		TITLE_START: string
 		/**
@@ -318,6 +318,16 @@ type RootTranslation = {
 			 */
 			BUTTON: string
 		}
+		SAVINGS_COLLABORATIVE: {
+			/**
+			 * B​i​g​g​e​r​ ​g​o​a​l​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​s​m​a​l​l​ ​s​t​e​p​s​.​ ​G​e​t​ ​f​r​e​e​ ​p​r​o​f​e​s​s​i​o​n​a​l​ ​g​u​i​d​a​n​c​e​ ​t​o​ ​p​l​a​n​ ​w​h​a​t​ ​c​o​m​e​s​ ​n​e​x​t​.
+			 */
+			DESCRIPTION: string
+			/**
+			 * V​I​S​I​T​ ​S​A​V​I​N​G​S​ ​C​O​L​L​A​B​O​R​A​T​I​V​E
+			 */
+			BUTTON: string
+		}
 	}
 }
 
@@ -355,7 +365,7 @@ export type TranslationFunctions = {
 			CHILDREN: {
 				ZERO_TO_4: {
 					/**
-					 * How many children under age 6 did you have at the end of 2024?
+					 * How many children under age 6 did you have at the end of 2025?
 					 */
 					QUESTION: () => LocalizedString
 					/**
@@ -365,7 +375,7 @@ export type TranslationFunctions = {
 				}
 				FIVE_TO_16: {
 					/**
-					 * How many children between the ages of 6 and 16 did you have at the end of 2024?
+					 * How many children between the ages of 6 and 16 did you have at the end of 2025?
 					 */
 					QUESTION: () => LocalizedString
 					/**
@@ -458,15 +468,15 @@ export type TranslationFunctions = {
 			}
 			CARE_WORKER: {
 				/**
-				 * Do you work as a care worker?
+				 * Do you regularly care for young children other than your own?
 				 */
 				QUESTION: () => LocalizedString
 				/**
-				 * Does your spouse work as a care worker?
+				 * Does your spouse regularly care for young children other than your own?
 				 */
 				SPOUSE_QUESTION: () => LocalizedString
 				/**
-				 * **What is a care worker?** Care workers include child care providers, home health aides, personal care aides, and nursing assistants. This also includes **family members, friends, or neighbors** who regularly care for children age 5 or younger (720+ hours per year).
+				 * Care workers include **family, friends and neighbors** who regularly care for young children (about 14 hours per week) in addition to licensed childcare providers, home health aides, personal care aides, and nursing assistants.
 				 */
 				HELP_TEXT: () => LocalizedString
 			}
@@ -496,7 +506,7 @@ export type TranslationFunctions = {
 	}
 	RESULTS: {
 		/**
-		 * FILE 2024 TAXES & RECEIVE
+		 * FILE 2025 TAXES & RECEIVE
 		 */
 		TITLE_START: () => LocalizedString
 		/**
@@ -618,6 +628,16 @@ export type TranslationFunctions = {
 			DESCRIPTION: () => LocalizedString
 			/**
 			 * MEET MYFRIENDBEN
+			 */
+			BUTTON: () => LocalizedString
+		}
+		SAVINGS_COLLABORATIVE: {
+			/**
+			 * Bigger goals start with small steps. Get free professional guidance to plan what comes next.
+			 */
+			DESCRIPTION: () => LocalizedString
+			/**
+			 * VISIT SAVINGS COLLABORATIVE
 			 */
 			BUTTON: () => LocalizedString
 		}

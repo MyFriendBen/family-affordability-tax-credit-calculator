@@ -55,10 +55,10 @@ const en = {
 				ADD_INCOME: 'ADD ANOTHER INCOME'
 			},
 			CARE_WORKER: {
-				QUESTION: 'Do you work as a care worker?',
-				SPOUSE_QUESTION: 'Does your spouse work as a care worker?',
+				QUESTION: 'Do you regularly care for young children other than your own?',
+				SPOUSE_QUESTION: 'Does your spouse regularly care for young children other than your own?',
 				HELP_TEXT:
-					'**What is a care worker?** Care workers include child care providers, home health aides, personal care aides, and nursing assistants. This also includes **family members, friends, or neighbors** who regularly care for children age 5 or younger (720+ hours per year).'
+					'Care workers include **family, friends and neighbors** who regularly care for young children (about 14 hours per week) in addition to licensed childcare providers, home health aides, personal care aides, and nursing assistants.'
 			}
 		},
 		YES_OR_NO_INPUT: {
@@ -112,6 +112,11 @@ const en = {
 			DESCRIPTION:
 				'To see what other benefits you may be eligible for, click the button below to visit MyFriendBen.',
 			BUTTON: 'MEET MYFRIENDBEN'
+		},
+		SAVINGS_COLLABORATIVE: {
+			DESCRIPTION:
+				'Bigger goals start with small steps. Get free professional guidance to plan what comes next.',
+			BUTTON: 'VISIT SAVINGS COLLABORATIVE'
 		}
 	}
 } satisfies BaseTranslation;

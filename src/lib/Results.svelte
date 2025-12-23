@@ -2,7 +2,7 @@
 	import type { TaxCredit } from './mfbApi';
 	import t, { locale } from '$lib/i18n/i18n-svelte';
 	import { onMount } from 'svelte';
-	import { generateLinks, generateMfbLink, type Links } from './whiteLabelData';
+	import { generateLinks, generateMfbLink, generateSavingsCollaborativeLink, type Links } from './whiteLabelData';
 	import { page } from '$app/stores';
 
 	export let taxCredits: TaxCredit[];
@@ -36,6 +36,13 @@
 	}
 
 	let mfbLink = generateMfbLink($locale, whiteLabel);
+
+	function handleSavingsCollaborativeClick(event: MouseEvent) {
+		event.preventDefault();
+		// Generate link at click time to capture current Google Translate language
+		const link = generateSavingsCollaborativeLink($locale);
+		window.open(link, '_blank');
+	}
 </script>
 
 <div class="container" bind:this={container}>
@@ -119,6 +126,15 @@
 <p class="mfb-description">{$t.RESULTS.MFB.DESCRIPTION()}</p>
 <div class="mfb-link-container">
 	<a href={mfbLink} class="primary-button" target="_blank">{$t.RESULTS.MFB.BUTTON()}</a>
+</div>
+
+<p class="mfb-description">{$t.RESULTS.SAVINGS_COLLABORATIVE.DESCRIPTION()}</p>
+<div class="mfb-link-container">
+	<a
+		href="https://taxrefund.savingscollaborative.org/"
+		class="primary-button"
+		on:click={handleSavingsCollaborativeClick}>{$t.RESULTS.SAVINGS_COLLABORATIVE.BUTTON()}</a
+	>
 </div>
 
 <style>

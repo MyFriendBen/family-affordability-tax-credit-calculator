@@ -54,10 +54,10 @@ const es = {
 				ADD_INCOME: 'AÑADIR OTRO INGRESO'
 			},
 			CARE_WORKER: {
-				QUESTION: '¿Trabaja como cuidador?',
-				SPOUSE_QUESTION: '¿Su cónyuge trabaja como cuidador?',
+				QUESTION: '¿Cuida regularmente a niños pequeños que no son suyos?',
+				SPOUSE_QUESTION: '¿Su cónyuge cuida regularmente a niños pequeños que no son suyos?',
 				HELP_TEXT:
-					'**¿Qué es un trabajador de cuidado?** Los trabajadores de cuidado incluyen proveedores de cuidado infantil, asistentes de salud en el hogar, asistentes de cuidado personal y asistentes de enfermería. Esto también incluye **familiares, amigos o vecinos** que cuidan regularmente a niños de 5 años o menos (720+ horas por año).'
+					'Los trabajadores de cuidado incluyen **familiares, amigos y vecinos** que cuidan regularmente a niños pequeños (aproximadamente 14 horas por semana), además de proveedores profesionales de cuidado infantil, asistentes de salud en el hogar, asistentes de cuidado personal y asistentes de enfermería.'
 			}
 		},
 		YES_OR_NO_INPUT: {
@@ -112,6 +112,11 @@ const es = {
 			DESCRIPTION:
 				'Para ver qué otros beneficios puede ser elegible, haga clic en el botón a continuación para visitar MyFriendBen.',
 			BUTTON: 'CONOCE A MYFRIENDBEN'
+		},
+		SAVINGS_COLLABORATIVE: {
+			DESCRIPTION:
+				'Los grandes objetivos empiezan con pequeños pasos. Obtenga orientación profesional gratuita para planificar lo que viene.',
+			BUTTON: 'VISITAR SAVINGS COLLABORATIVE'
 		}
 	}
 } satisfies Translation;
