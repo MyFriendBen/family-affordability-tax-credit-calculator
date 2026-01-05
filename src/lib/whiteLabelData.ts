@@ -147,3 +147,30 @@ export function generateMfbLink(lang: Locales, whiteLabel?: string) {
 
 	return link;
 }
+
+/**
+ * Gets the current Google Translate target language from the googtrans cookie.
+ * The cookie format is "/sourceLang/targetLang" (e.g., "/en/es").
+ * Returns null if no Google Translate language is selected.
+ */
+export function getGoogleTranslateLanguage(): string | null {
+	if (typeof document === 'undefined') return null;
+
+	const cookie = document.cookie
+		.split('; ')
+		.find((row) => row.startsWith('googtrans='));
+
+	if (!cookie) return null;
+
+	const value = decodeURIComponent(cookie.split('=')[1]);
+	// Format is "/en/es" - we want the target language (second part)
+	const parts = value.split('/').filter(Boolean);
+	return parts.length >= 2 ? parts[1] : null;
+}
+
+export function generateSavingsCollaborativeLink(lang: Locales) {
+	// Check for Google Translate language first, fall back to app locale
+	const googleTranslateLang = getGoogleTranslateLanguage();
+	const effectiveLang = googleTranslateLang || lang;
+	return `https://taxrefund.savingscollaborative.org/?lang=${effectiveLang}`;
+}

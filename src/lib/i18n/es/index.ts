@@ -16,11 +16,11 @@ const es = {
 			},
 			CHILDREN: {
 				ZERO_TO_4: {
-					QUESTION: '¿Cuántos hijos menores de 6 años tenías al finalizar el 2024?',
+					QUESTION: '¿Cuántos hijos menores de 6 años tenías al finalizar el 2025?',
 					LABEL: 'Número de niños'
 				},
 				FIVE_TO_16: {
-					QUESTION: '¿Cuántos hijos entre 6 y 16 años tenías al finalizar el 2024?',
+					QUESTION: '¿Cuántos hijos entre 6 y 16 años tenías al finalizar el 2025?',
 					LABEL: 'Número de niños'
 				},
 				ERROR: 'El tamaño máximo del hogar es 8'
@@ -52,6 +52,12 @@ const es = {
 				ERROR: 'Este campo es obligatorio',
 				REMOVE_INCOME: 'Eliminar ingresos',
 				ADD_INCOME: 'AÑADIR OTRO INGRESO'
+			},
+			CARE_WORKER: {
+				QUESTION: '¿Cuida regularmente a niños pequeños que no son suyos?',
+				SPOUSE_QUESTION: '¿Su cónyuge cuida regularmente a niños pequeños que no son suyos?',
+				HELP_TEXT:
+					'Los trabajadores de cuidado incluyen **familiares, amigos y vecinos** que cuidan regularmente a niños pequeños (aproximadamente 14 horas por semana), además de proveedores profesionales de cuidado infantil, asistentes de salud en el hogar, asistentes de cuidado personal y asistentes de enfermería.'
 			}
 		},
 		YES_OR_NO_INPUT: {
@@ -63,7 +69,7 @@ const es = {
 		ERROR: 'algo salió mal'
 	},
 	RESULTS: {
-		TITLE_START: 'PRESENTAR IMPUESTOS 2024',
+		TITLE_START: 'PRESENTAR IMPUESTOS 2025',
 		TITLE_MIDDLE: 'Y RECIBA {0:string} EN',
 		TITLE_END: 'CRÉDITOS FISCALES',
 		CREDITS_FOUND_TITLE: '{0:number} Créditos fiscales encontrados:',
@@ -72,7 +78,8 @@ const es = {
 			co_tax_credit_coeitc: 'Crédito fiscal por ingreso del trabajo de Colorado:',
 			co_tax_credit_ctc: 'Crédito fiscal por hijos:',
 			co_tax_credit_coctc: 'Crédito fiscal por hijos de Colorado:',
-			co_tax_credit_fatc: 'Crédito fiscal por asequibilidad familiar de Colorado:'
+			co_tax_credit_fatc: 'Crédito fiscal por asequibilidad familiar de Colorado:',
+			co_tax_credit_care_worker: 'Crédito fiscal para trabajadores de cuidado de Colorado:'
 		},
 		REQUIRED_DOCUMENTS: {
 			TITLE: 'Documentos requeridos para presentar impuestos:',
@@ -105,6 +112,11 @@ const es = {
 			DESCRIPTION:
 				'Para ver qué otros beneficios puede ser elegible, haga clic en el botón a continuación para visitar MyFriendBen.',
 			BUTTON: 'CONOCE A MYFRIENDBEN'
+		},
+		SAVINGS_COLLABORATIVE: {
+			DESCRIPTION:
+				'Los grandes objetivos empiezan con pequeños pasos. Obtenga orientación profesional gratuita para planificar lo que viene.',
+			BUTTON: 'VISITAR SAVINGS COLLABORATIVE'
 		}
 	}
 } satisfies Translation;

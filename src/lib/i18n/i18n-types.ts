@@ -49,7 +49,7 @@ type RootTranslation = {
 			CHILDREN: {
 				ZERO_TO_4: {
 					/**
-					 * H​o​w​ ​m​a​n​y​ ​c​h​i​l​d​r​e​n​ ​u​n​d​e​r​ ​a​g​e​ ​6​ ​d​i​d​ ​y​o​u​ ​h​a​v​e​ ​a​t​ ​t​h​e​ ​e​n​d​ ​o​f​ ​2​0​2​4​?
+					 * H​o​w​ ​m​a​n​y​ ​c​h​i​l​d​r​e​n​ ​u​n​d​e​r​ ​a​g​e​ ​6​ ​d​i​d​ ​y​o​u​ ​h​a​v​e​ ​a​t​ ​t​h​e​ ​e​n​d​ ​o​f​ ​2​0​2​5​?
 					 */
 					QUESTION: string
 					/**
@@ -59,7 +59,7 @@ type RootTranslation = {
 				}
 				FIVE_TO_16: {
 					/**
-					 * H​o​w​ ​m​a​n​y​ ​c​h​i​l​d​r​e​n​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​a​g​e​s​ ​o​f​ ​6​ ​a​n​d​ ​1​6​ ​d​i​d​ ​y​o​u​ ​h​a​v​e​ ​a​t​ ​t​h​e​ ​e​n​d​ ​o​f​ ​2​0​2​4​?
+					 * H​o​w​ ​m​a​n​y​ ​c​h​i​l​d​r​e​n​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​a​g​e​s​ ​o​f​ ​6​ ​a​n​d​ ​1​6​ ​d​i​d​ ​y​o​u​ ​h​a​v​e​ ​a​t​ ​t​h​e​ ​e​n​d​ ​o​f​ ​2​0​2​5​?
 					 */
 					QUESTION: string
 					/**
@@ -150,6 +150,20 @@ type RootTranslation = {
 				 */
 				ADD_INCOME: string
 			}
+			CARE_WORKER: {
+				/**
+				 * D​o​ ​y​o​u​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​y​o​u​n​g​ ​c​h​i​l​d​r​e​n​ ​o​t​h​e​r​ ​t​h​a​n​ ​y​o​u​r​ ​o​w​n​?
+				 */
+				QUESTION: string
+				/**
+				 * D​o​e​s​ ​y​o​u​r​ ​s​p​o​u​s​e​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​y​o​u​n​g​ ​c​h​i​l​d​r​e​n​ ​o​t​h​e​r​ ​t​h​a​n​ ​y​o​u​r​ ​o​w​n​?
+				 */
+				SPOUSE_QUESTION: string
+				/**
+				 * C​a​r​e​ ​w​o​r​k​e​r​s​ ​i​n​c​l​u​d​e​ ​*​*​f​a​m​i​l​y​,​ ​f​r​i​e​n​d​s​ ​a​n​d​ ​n​e​i​g​h​b​o​r​s​*​*​ ​w​h​o​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​y​o​u​n​g​ ​c​h​i​l​d​r​e​n​ ​(​a​b​o​u​t​ ​1​4​ ​h​o​u​r​s​ ​p​e​r​ ​w​e​e​k​)​ ​i​n​ ​a​d​d​i​t​i​o​n​ ​t​o​ ​l​i​c​e​n​s​e​d​ ​c​h​i​l​d​c​a​r​e​ ​p​r​o​v​i​d​e​r​s​,​ ​h​o​m​e​ ​h​e​a​l​t​h​ ​a​i​d​e​s​,​ ​p​e​r​s​o​n​a​l​ ​c​a​r​e​ ​a​i​d​e​s​,​ ​a​n​d​ ​n​u​r​s​i​n​g​ ​a​s​s​i​s​t​a​n​t​s​.
+				 */
+				HELP_TEXT: string
+			}
 		}
 		YES_OR_NO_INPUT: {
 			/**
@@ -176,7 +190,7 @@ type RootTranslation = {
 	}
 	RESULTS: {
 		/**
-		 * F​I​L​E​ ​2​0​2​4​ ​T​A​X​E​S​ ​&​ ​R​E​C​E​I​V​E
+		 * F​I​L​E​ ​2​0​2​5​ ​T​A​X​E​S​ ​&​ ​R​E​C​E​I​V​E
 		 */
 		TITLE_START: string
 		/**
@@ -215,6 +229,10 @@ type RootTranslation = {
 			 * C​o​l​o​r​a​d​o​ ​F​a​m​i​l​y​ ​A​f​f​o​r​d​a​b​i​l​i​t​y​ ​T​a​x​ ​C​r​e​d​i​t​:
 			 */
 			co_tax_credit_fatc: string
+			/**
+			 * C​o​l​o​r​a​d​o​ ​C​a​r​e​ ​W​o​r​k​e​r​ ​T​a​x​ ​C​r​e​d​i​t​:
+			 */
+			co_tax_credit_care_worker: string
 		}
 		REQUIRED_DOCUMENTS: {
 			/**
@@ -292,11 +310,21 @@ type RootTranslation = {
 			 */
 			TITLE: string
 			/**
-			 * T​o​ ​s​e​e​ ​w​h​a​t​ ​o​t​h​e​r​ ​b​e​n​e​f​i​t​s​ ​y​o​u​ ​m​a​y​ ​b​e​ ​e​l​i​g​i​b​l​e​,​ ​c​l​i​c​k​ ​t​h​e​ ​b​u​t​t​o​n​ ​b​e​l​o​w​ ​t​o​ ​v​i​s​i​t​ ​M​y​F​r​i​e​n​d​B​e​n​.
+			 * T​o​ ​s​e​e​ ​w​h​a​t​ ​o​t​h​e​r​ ​b​e​n​e​f​i​t​s​ ​y​o​u​ ​m​a​y​ ​b​e​ ​e​l​i​g​i​b​l​e​ ​f​o​r​,​ ​c​l​i​c​k​ ​t​h​e​ ​b​u​t​t​o​n​ ​b​e​l​o​w​ ​t​o​ ​v​i​s​i​t​ ​M​y​F​r​i​e​n​d​B​e​n​.
 			 */
 			DESCRIPTION: string
 			/**
 			 * M​E​E​T​ ​M​Y​F​R​I​E​N​D​B​E​N
+			 */
+			BUTTON: string
+		}
+		SAVINGS_COLLABORATIVE: {
+			/**
+			 * B​i​g​g​e​r​ ​g​o​a​l​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​s​m​a​l​l​ ​s​t​e​p​s​.​ ​G​e​t​ ​f​r​e​e​ ​p​r​o​f​e​s​s​i​o​n​a​l​ ​g​u​i​d​a​n​c​e​ ​t​o​ ​p​l​a​n​ ​w​h​a​t​ ​c​o​m​e​s​ ​n​e​x​t​.
+			 */
+			DESCRIPTION: string
+			/**
+			 * V​I​S​I​T​ ​S​A​V​I​N​G​S​ ​C​O​L​L​A​B​O​R​A​T​I​V​E
 			 */
 			BUTTON: string
 		}
@@ -337,7 +365,7 @@ export type TranslationFunctions = {
 			CHILDREN: {
 				ZERO_TO_4: {
 					/**
-					 * How many children under age 6 did you have at the end of 2024?
+					 * How many children under age 6 did you have at the end of 2025?
 					 */
 					QUESTION: () => LocalizedString
 					/**
@@ -347,7 +375,7 @@ export type TranslationFunctions = {
 				}
 				FIVE_TO_16: {
 					/**
-					 * How many children between the ages of 6 and 16 did you have at the end of 2024?
+					 * How many children between the ages of 6 and 16 did you have at the end of 2025?
 					 */
 					QUESTION: () => LocalizedString
 					/**
@@ -438,6 +466,20 @@ export type TranslationFunctions = {
 				 */
 				ADD_INCOME: () => LocalizedString
 			}
+			CARE_WORKER: {
+				/**
+				 * Do you regularly care for young children other than your own?
+				 */
+				QUESTION: () => LocalizedString
+				/**
+				 * Does your spouse regularly care for young children other than your own?
+				 */
+				SPOUSE_QUESTION: () => LocalizedString
+				/**
+				 * Care workers include **family, friends and neighbors** who regularly care for young children (about 14 hours per week) in addition to licensed childcare providers, home health aides, personal care aides, and nursing assistants.
+				 */
+				HELP_TEXT: () => LocalizedString
+			}
 		}
 		YES_OR_NO_INPUT: {
 			/**
@@ -464,7 +506,7 @@ export type TranslationFunctions = {
 	}
 	RESULTS: {
 		/**
-		 * FILE 2024 TAXES & RECEIVE
+		 * FILE 2025 TAXES & RECEIVE
 		 */
 		TITLE_START: () => LocalizedString
 		/**
@@ -500,6 +542,10 @@ export type TranslationFunctions = {
 			 * Colorado Family Affordability Tax Credit:
 			 */
 			co_tax_credit_fatc: () => LocalizedString
+			/**
+			 * Colorado Care Worker Tax Credit:
+			 */
+			co_tax_credit_care_worker: () => LocalizedString
 		}
 		REQUIRED_DOCUMENTS: {
 			/**
@@ -577,11 +623,21 @@ export type TranslationFunctions = {
 			 */
 			TITLE: () => LocalizedString
 			/**
-			 * To see what other benefits you may be eligible, click the button below to visit MyFriendBen.
+			 * To see what other benefits you may be eligible for, click the button below to visit MyFriendBen.
 			 */
 			DESCRIPTION: () => LocalizedString
 			/**
 			 * MEET MYFRIENDBEN
+			 */
+			BUTTON: () => LocalizedString
+		}
+		SAVINGS_COLLABORATIVE: {
+			/**
+			 * Bigger goals start with small steps. Get free professional guidance to plan what comes next.
+			 */
+			DESCRIPTION: () => LocalizedString
+			/**
+			 * VISIT SAVINGS COLLABORATIVE
 			 */
 			BUTTON: () => LocalizedString
 		}

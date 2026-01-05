@@ -16,12 +16,12 @@ const en = {
 			},
 			CHILDREN: {
 				ZERO_TO_4: {
-					QUESTION: 'How many children under age 6 did you have at the end of 2024?',
+					QUESTION: 'How many children under age 6 did you have at the end of 2025?',
 					LABEL: 'Number of children'
 				},
 				FIVE_TO_16: {
 					QUESTION:
-						'How many children between the ages of 6 and 16 did you have at the end of 2024?',
+						'How many children between the ages of 6 and 16 did you have at the end of 2025?',
 					LABEL: 'Number of children'
 				},
 				ERROR: 'The max household size is 8'
@@ -53,6 +53,12 @@ const en = {
 				ERROR: 'This field is required',
 				REMOVE_INCOME: 'Remove Income',
 				ADD_INCOME: 'ADD ANOTHER INCOME'
+			},
+			CARE_WORKER: {
+				QUESTION: 'Do you regularly care for young children other than your own?',
+				SPOUSE_QUESTION: 'Does your spouse regularly care for young children other than your own?',
+				HELP_TEXT:
+					'Care workers include **family, friends and neighbors** who regularly care for young children (about 14 hours per week) in addition to licensed childcare providers, home health aides, personal care aides, and nursing assistants.'
 			}
 		},
 		YES_OR_NO_INPUT: {
@@ -64,7 +70,7 @@ const en = {
 		ERROR: 'Something went wrong'
 	},
 	RESULTS: {
-		TITLE_START: 'FILE 2024 TAXES & RECEIVE',
+		TITLE_START: 'FILE 2025 TAXES & RECEIVE',
 		TITLE_MIDDLE: '{0:string}',
 		TITLE_END: '{0:string=""} IN TAX CREDITS',
 		CREDITS_FOUND_TITLE: '{0:number} Tax Credits Found:',
@@ -73,7 +79,8 @@ const en = {
 			co_tax_credit_coeitc: 'Colorado Earned Income Tax Credit:',
 			co_tax_credit_ctc: 'Federal Child Tax Credit:',
 			co_tax_credit_coctc: 'Colorado Child Tax Credit:',
-			co_tax_credit_fatc: 'Colorado Family Affordability Tax Credit:'
+			co_tax_credit_fatc: 'Colorado Family Affordability Tax Credit:',
+			co_tax_credit_care_worker: 'Colorado Care Worker Tax Credit:'
 		},
 		REQUIRED_DOCUMENTS: {
 			TITLE: 'Required Documents to File Taxes:',
@@ -105,6 +112,11 @@ const en = {
 			DESCRIPTION:
 				'To see what other benefits you may be eligible for, click the button below to visit MyFriendBen.',
 			BUTTON: 'MEET MYFRIENDBEN'
+		},
+		SAVINGS_COLLABORATIVE: {
+			DESCRIPTION:
+				'Bigger goals start with small steps. Get free professional guidance to plan what comes next.',
+			BUTTON: 'VISIT SAVINGS COLLABORATIVE'
 		}
 	}
 } satisfies BaseTranslation;

@@ -35,6 +35,7 @@
 	"type": "module",
 	"dependencies": {
 		"@hubspot/api-client": "^12.0.1",
+		"marked": "^17.0.1",
 		"typesafe-i18n": "^5.26.2"
 	}
 }

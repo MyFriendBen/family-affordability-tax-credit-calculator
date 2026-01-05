@@ -6,11 +6,14 @@
 	import Input from './Input.svelte';
 	import AddButton from './AddButton.svelte';
 	import newErrorMessage from './handleError';
+	import Markdown from './Markdown.svelte';
 
 	export let handleSubmit: (
 		isMarried: boolean,
 		childAges: number[],
-		incomes: IncomeType[]
+		incomes: IncomeType[],
+		headIsCareWorker: boolean,
+		spouseIsCareWorker: boolean
 	) => void | Promise<void>;
 
 	const MAX_HOUSEHOLD_SIZE = 8;
@@ -20,6 +23,8 @@
 
 	let isMarried = false;
 	let hasIncome = false;
+	let headIsCareWorker = false;
+	let spouseIsCareWorker = false;
 
 	let zeroTo4: number | null = 0;
 	let fiveTo16: number | null = 0;
@@ -37,6 +42,11 @@
 		} else if (!hasIncome) {
 			incomes = [];
 		}
+	}
+
+	// Reset spouse care worker status when not married
+	$: if (!isMarried) {
+		spouseIsCareWorker = false;
 	}
 
 	function addIncome() {
@@ -71,7 +81,13 @@
 
 		const childAges = [...Array(zeroTo4 ?? 0).fill(4), ...Array(fiveTo16 ?? 0).fill(10)];
 		try {
-			await handleSubmit(isMarried, childAges as number[], incomes);
+			await handleSubmit(
+				isMarried,
+				childAges as number[],
+				incomes,
+				headIsCareWorker,
+				spouseIsCareWorker
+			);
 		} catch (error) {
 			hasError = true;
 			console.error(error);
@@ -137,6 +153,24 @@
 			</div>
 		{/if}
 	</div>
+	<div class="question-container">
+		<YesNo
+			bind:value={headIsCareWorker}
+			label={$t.FORM.QUESTIONS.CARE_WORKER.QUESTION()}
+			id="head-care-worker"
+		/>
+		<p class="help-text"><Markdown content={$t.FORM.QUESTIONS.CARE_WORKER.HELP_TEXT()} /></p>
+	</div>
+	{#if isMarried}
+		<div class="question-container colored-section">
+			<YesNo
+				bind:value={spouseIsCareWorker}
+				label={$t.FORM.QUESTIONS.CARE_WORKER.SPOUSE_QUESTION()}
+				id="spouse-care-worker"
+			/>
+			<p class="help-text"><Markdown content={$t.FORM.QUESTIONS.CARE_WORKER.HELP_TEXT()} /></p>
+		</div>
+	{/if}
 	<div class="button-container">
 		<button type="submit" disabled={loading} class="primary-button">
 			{#if !loading}
@@ -192,5 +226,12 @@
 		margin: 0;
 		padding: 0.5em 0;
 		font-size: 1.3em;
+	}
+
+	.help-text {
+		margin: 0.5em 0 0 0;
+		padding: 0;
+		/* font-size: 0.9em; */
+		color: #000;
 	}
 </style>
