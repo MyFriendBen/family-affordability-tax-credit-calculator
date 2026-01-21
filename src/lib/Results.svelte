@@ -110,15 +110,13 @@
 				>{$t.RESULTS.OTHER_FILING_OPTIONS.PAID()}</a
 			>
 		</div>
-		{#if whiteLabel === 'gac'}
-			<div class="link-container">
-				<a
-					href="https://www.freetaxusa.com/?utm_source=get_ahead_colorado"
-					target="_blank"
-					class="primary-button">{$t.RESULTS.OTHER_FILING_OPTIONS.FREE_TAX_USA()}</a
-				>
-			</div>
-		{/if}
+		<div class="link-container">
+			<a
+				href="https://www.freetaxusa.com/?utm_source=get_ahead_colorado"
+				target="_blank"
+				class="primary-button">{$t.RESULTS.OTHER_FILING_OPTIONS.FREE_TAX_USA()}</a
+			>
+		</div>
 	</div>
 </div>
 
