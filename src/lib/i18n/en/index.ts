@@ -55,10 +55,10 @@ const en = {
 				ADD_INCOME: 'ADD ANOTHER INCOME'
 			},
 			CARE_WORKER: {
-				QUESTION: 'Do you regularly care for young children other than your own?',
-				SPOUSE_QUESTION: 'Does your spouse regularly care for young children other than your own?',
+				QUESTION: 'Do you regularly care for kids under 6 years old other than your own?',
+				SPOUSE_QUESTION: 'Does your spouse regularly care for kids under 6 years old other than your own?',
 				HELP_TEXT:
-					'Care workers include **family, friends and neighbors** who regularly care for young children (about 14 hours per week) in addition to licensed childcare providers, home health aides, personal care aides, and nursing assistants.'
+					'Care workers include **family, friends and neighbors** who regularly care for kids under 6 years old (about 14 hours per week) in addition to licensed childcare providers, home health aides, personal care aides, and nursing assistants.'
 			}
 		},
 		YES_OR_NO_INPUT: {
@@ -103,7 +103,7 @@ const en = {
 		OTHER_FILING_OPTIONS: {
 			TITLE: 'OTHER FILING OPTIONS',
 			PAID: 'PAID FILING OPTIONS',
-			FREE_TAX_USA: 'FREETAXUSA ONLINE FILING'
+			FREE_TAX_USA: 'FILE ONLINE WITH SUPPORT FOR $25'
 		},
 		DISCLAIMER:
 			'Based on the income information you provided, this is the total amount of credits you may be eligible for. The final refund you receive will be based on this number minus any liabilities you may owe. Filers who receive all or most of their income from a W-2 earning job will likely receive nearly all of the value of these credits in a refund.',
@@ -115,7 +115,7 @@ const en = {
 		},
 		SAVINGS_COLLABORATIVE: {
 			DESCRIPTION:
-				'Bigger goals start with small steps. Get free professional guidance to plan what comes next.',
+				'Make the most of your tax return with free banking, savings and financial planning services.',
 			BUTTON: 'VISIT SAVINGS COLLABORATIVE'
 		}
 	}

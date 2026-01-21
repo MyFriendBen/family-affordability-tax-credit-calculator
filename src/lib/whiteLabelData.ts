@@ -9,7 +9,8 @@ export type WhiteLabels =
 	| 'servicios'
 	| 'jeffco'
 	| 'adams'
-	| 'arapahoe';
+	| 'arapahoe'
+	| '211colorado';
 
 export const WHITE_LABELS: WhiteLabels[] = [
 	'gac',
@@ -19,7 +20,8 @@ export const WHITE_LABELS: WhiteLabels[] = [
 	'servicios',
 	'jeffco',
 	'adams',
-	'arapahoe'
+	'arapahoe',
+	'211colorado'
 ];
 
 export type Colors = {
@@ -72,6 +74,11 @@ export const WHITE_LABEL_COLORS: {
 		primary: '#a5243b',
 		secondary: '#22355b',
 		headerColor: '#ffffff'
+	},
+	'211colorado': {
+		primary: '#004f99',
+		secondary: '#fc752b',
+		headerColor: '#ffffff'
 	}
 };
 
@@ -116,7 +123,12 @@ export function generateLinks(lang: Locales, whiteLabel?: string): Links {
 			'https://docs.google.com/forms/d/e/1FAIpQLSeoBcGExQVk4v1DzXeo8BDvyx4vdQFstsoW9A9sUvAnvOb_zA/viewform';
 	} else if (whiteLabel === 'pueblo_united_way') {
 		fileInPersonLink =
-			'https://www.pueblounitedway.org/vita#file-in-person?utm_source=online&utm_medium=calculator&utm_campaign=file_for_free_in_person&utm_id=pueblo_united_way&utm_term=english&utm_content=gac_file_in_person';
+			'https://www.pueblounitedway.org/vita#file-in-person';
+	} else if (whiteLabel === 'dabc') {
+		fileInPersonLink = 'https://denverabc.org/schedule/';
+	} else if (whiteLabel === '211colorado') {
+		fileInPersonLink =
+			'https://search.211colorado.org/search?terms=aarp%20tax%20aide&page=1&location=Colorado&taxonomy_code=332&service_area=colorado';
 	}
 
 	return {

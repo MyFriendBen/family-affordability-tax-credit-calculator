@@ -54,10 +54,10 @@ const es = {
 				ADD_INCOME: 'AÑADIR OTRO INGRESO'
 			},
 			CARE_WORKER: {
-				QUESTION: '¿Cuida regularmente a niños pequeños que no son suyos?',
-				SPOUSE_QUESTION: '¿Su cónyuge cuida regularmente a niños pequeños que no son suyos?',
+				QUESTION: '¿Cuida regularmente a niños menores de 6 años que no son suyos?',
+				SPOUSE_QUESTION: '¿Su cónyuge cuida regularmente a niños menores de 6 años que no son suyos?',
 				HELP_TEXT:
-					'Los trabajadores de cuidado incluyen **familiares, amigos y vecinos** que cuidan regularmente a niños pequeños (aproximadamente 14 horas por semana), además de proveedores profesionales de cuidado infantil, asistentes de salud en el hogar, asistentes de cuidado personal y asistentes de enfermería.'
+					'Los trabajadores de cuidado incluyen **familiares, amigos y vecinos** que cuidan regularmente a niños menores de 6 años (aproximadamente 14 horas por semana), además de proveedores profesionales de cuidado infantil, asistentes de salud en el hogar, asistentes de cuidado personal y asistentes de enfermería.'
 			}
 		},
 		YES_OR_NO_INPUT: {
@@ -103,7 +103,7 @@ const es = {
 		OTHER_FILING_OPTIONS: {
 			TITLE: 'OTRAS OPCIONES DE PRESENTACIÓN',
 			PAID: 'OPCIONES DE PRESENTACIÓN PAGADAS',
-			FREE_TAX_USA: 'DECLARACIÓN DE IMPUESTOS EN LÍNEA DE FREETAXUSA'
+			FREE_TAX_USA: 'DECLARAR EN LÍNEA CON APOYO POR $25'
 		},
 		DISCLAIMER:
 			'Según la información de ingresos que proporcionó, esta es la cantidad total de créditos para los que puede ser elegible. El reembolso final que reciba se basará en este número menos cualquier obligación que pueda tener. Los contribuyentes que reciben todo o la mayor parte de sus ingresos de un trabajo con salario W-2 probablemente recibirán casi todo el valor de estos créditos en un reembolso.',
@@ -115,7 +115,7 @@ const es = {
 		},
 		SAVINGS_COLLABORATIVE: {
 			DESCRIPTION:
-				'Los grandes objetivos empiezan con pequeños pasos. Obtenga orientación profesional gratuita para planificar lo que viene.',
+				'Aproveche al máximo su reembolso de impuestos con servicios gratuitos de banca, ahorro y planificación financiera.',
 			BUTTON: 'VISITAR SAVINGS COLLABORATIVE'
 		}
 	}
