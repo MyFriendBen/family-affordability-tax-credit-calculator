@@ -34,6 +34,7 @@
 		.sort((a, b) => b.value - a.value);
 
 	let container: HTMLElement;
+	let inPersonSection: HTMLElement;
 
 	onMount(() => {
 		container.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -57,66 +58,59 @@
 	function handleFileInPersonClick(event: MouseEvent) {
 		event.preventDefault();
 		showQuiz = true;
-		// Scroll to top of container when showing quiz
-		container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		// Give Svelte a tick to render the quiz, then scroll to it
+		setTimeout(() => {
+			inPersonSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}, 0);
 	}
 </script>
 
 <div class="container" bind:this={container}>
-	{#if showQuiz}
-		<FileInPersonQuiz
-			{yearlyIncome}
-			{isCareWorker}
-			{whiteLabel}
-			onBack={() => (showQuiz = false)}
-		/>
-	{:else}
-		<h2 class="benefits-header">
-			<div class="primary-heading results-heading">{$t.RESULTS.TITLE_START()}</div>
-			{#if $locale === 'es'}
-				<div class="primary-heading results-heading">
-					{$t.RESULTS.TITLE_MIDDLE(formatNumber(total))}
-				</div>
-			{/if}
-			<div class="primary-heading results-heading">{$t.RESULTS.TITLE_END(formatNumber(total))}</div>
-		</h2>
-
-		{#if eligbleCredits.length > 0}
-			<div class="results-lists">
-				<div class="section tax-values">
-					<h3 class="secondary-heading">{$t.RESULTS.CREDITS_FOUND_TITLE(eligbleCredits.length)}</h3>
-					<ul>
-						{#each eligbleCredits as credit}
-							<li>{$t.RESULTS.CREDIT_NAMES[credit.id]()} {formatNumber(credit.value)}</li>
-						{/each}
-					</ul>
-				</div>
-
-				<!-- <div class="section"> -->
-				<!-- 	<h3 class="secondary-heading">{$t.RESULTS.REQUIRED_DOCUMENTS.TITLE()}</h3> -->
-				<!-- 	<ul> -->
-				<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.ID()}</li> -->
-				<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.SSN()}</li> -->
-				<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.BIRTH_DATES()}</li> -->
-				<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.W2()}</li> -->
-				<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.BANK_ACCOUNT()}</li> -->
-				<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.PRIOR_TAX_RETURNS()}</li> -->
-				<!-- 		<li> -->
-				<!-- 			{$t.RESULTS.REQUIRED_DOCUMENTS.IP_PIN()} -->
-				<!-- 			<a -->
-				<!-- 				href="http://irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin" -->
-				<!-- 				class="ip-pin-link">{$t.RESULTS.REQUIRED_DOCUMENTS.IP_PIN_LINK_TEXT()}</a -->
-				<!-- 			>. -->
-				<!-- 		</li> -->
-				<!-- 	</ul> -->
-				<!-- </div> -->
+	<h2 class="benefits-header">
+		<div class="primary-heading results-heading">{$t.RESULTS.TITLE_START()}</div>
+		{#if $locale === 'es'}
+			<div class="primary-heading results-heading">
+				{$t.RESULTS.TITLE_MIDDLE(formatNumber(total))}
 			</div>
 		{/if}
+		<div class="primary-heading results-heading">{$t.RESULTS.TITLE_END(formatNumber(total))}</div>
+	</h2>
 
-		<p class="disclaimer">* {$t.RESULTS.DISCLAIMER()}</p>
+	{#if eligbleCredits.length > 0}
+		<div class="results-lists">
+			<div class="section tax-values">
+				<h3 class="secondary-heading">{$t.RESULTS.CREDITS_FOUND_TITLE(eligbleCredits.length)}</h3>
+				<ul>
+					{#each eligbleCredits as credit}
+						<li>{$t.RESULTS.CREDIT_NAMES[credit.id]()} {formatNumber(credit.value)}</li>
+					{/each}
+				</ul>
+			</div>
+		</div>
+	{/if}
 
-		<div class="section links">
-			<h3 class="primary-heading ways-to-file">{$t.RESULTS.FILE_FOR_FREE.TITLE()}</h3>
+	<p class="disclaimer">* {$t.RESULTS.DISCLAIMER()}</p>
+
+	<div class="section links">
+		<h3 class="primary-heading ways-to-file">{$t.RESULTS.FILE_FOR_FREE.TITLE()}</h3>
+
+		<!-- FILE IN-PERSON: Button transforms to header when expanded -->
+		{#if showQuiz}
+			<div class="in-person-expanded" bind:this={inPersonSection}>
+				<div class="in-person-header-row">
+					<h4 class="in-person-header">{$t.RESULTS.FILE_FOR_FREE.IN_PERSON()}</h4>
+					<button type="button" class="close-button" on:click={() => (showQuiz = false)}>
+						{$t.FILE_IN_PERSON_QUIZ.CLOSE_BUTTON()}
+					</button>
+				</div>
+				<FileInPersonQuiz
+					{yearlyIncome}
+					{isCareWorker}
+					{whiteLabel}
+					onClose={() => (showQuiz = false)}
+				/>
+			</div>
+		{:else}
 			<div class="link-container">
 				<a href={links.fileOnline} target="_blank" class="primary-button"
 					>{$t.RESULTS.FILE_FOR_FREE.ONLINE()}</a
@@ -127,23 +121,24 @@
 					>{$t.RESULTS.FILE_FOR_FREE.IN_PERSON()}</button
 				>
 			</div>
-			<h3 class="primary-heading other-filing-options ways-to-file">
-				{$t.RESULTS.OTHER_FILING_OPTIONS.TITLE()}
-			</h3>
-			<div class="link-container">
-				<a href={links.paidFiling} target="_blank" class="primary-button"
-					>{$t.RESULTS.OTHER_FILING_OPTIONS.PAID()}</a
-				>
-			</div>
-			<div class="link-container">
-				<a
-					href="https://www.freetaxusa.com/?utm_source=get_ahead_colorado"
-					target="_blank"
-					class="primary-button">{$t.RESULTS.OTHER_FILING_OPTIONS.FREE_TAX_USA()}</a
-				>
-			</div>
+		{/if}
+
+		<h3 class="primary-heading other-filing-options ways-to-file">
+			{$t.RESULTS.OTHER_FILING_OPTIONS.TITLE()}
+		</h3>
+		<div class="link-container">
+			<a href={links.paidFiling} target="_blank" class="primary-button"
+				>{$t.RESULTS.OTHER_FILING_OPTIONS.PAID()}</a
+			>
 		</div>
-	{/if}
+		<div class="link-container">
+			<a
+				href="https://www.freetaxusa.com/?utm_source=get_ahead_colorado"
+				target="_blank"
+				class="primary-button">{$t.RESULTS.OTHER_FILING_OPTIONS.FREE_TAX_USA()}</a
+			>
+		</div>
+	</div>
 </div>
 
 <h2 class="primary-heading">{$t.RESULTS.MFB.TITLE()}</h2>
@@ -228,6 +223,43 @@
 
 	.mfb-description {
 		text-align: center;
+	}
+
+	.in-person-expanded {
+		padding: 0.5em 0;
+	}
+
+	.in-person-header-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.5em 0;
+	}
+
+	.in-person-header {
+		color: var(--primary-color);
+		background-color: transparent;
+		font-size: 1.4em;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	.close-button {
+		padding: 0.4em 1em;
+		font-size: 0.9em;
+		font-weight: bold;
+		cursor: pointer;
+		text-transform: uppercase;
+		font-family: inherit;
+		border: 2px solid var(--primary-color);
+		background-color: transparent;
+		color: var(--primary-color);
+	}
+
+	.close-button:hover {
+		background-color: var(--primary-color);
+		color: white;
 	}
 
 	@media (min-width: 80rem) {

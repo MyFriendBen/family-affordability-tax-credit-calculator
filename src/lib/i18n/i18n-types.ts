@@ -555,9 +555,17 @@ type RootTranslation = {
 		 */
 		SUBMIT_BUTTON: string
 		/**
-		 * B​A​C​K​ ​T​O​ ​R​E​S​U​L​T​S
+		 * N​E​X​T
+		 */
+		NEXT_BUTTON: string
+		/**
+		 * B​A​C​K
 		 */
 		BACK_BUTTON: string
+		/**
+		 * C​L​O​S​E
+		 */
+		CLOSE_BUTTON: string
 	}
 }
 
@@ -1098,9 +1106,17 @@ export type TranslationFunctions = {
 		 */
 		SUBMIT_BUTTON: () => LocalizedString
 		/**
-		 * BACK TO RESULTS
+		 * NEXT
+		 */
+		NEXT_BUTTON: () => LocalizedString
+		/**
+		 * BACK
 		 */
 		BACK_BUTTON: () => LocalizedString
+		/**
+		 * CLOSE
+		 */
+		CLOSE_BUTTON: () => LocalizedString
 	}
 }
 

@@ -219,7 +219,9 @@ const en = {
 			}
 		},
 		SUBMIT_BUTTON: 'SEE MY OPTIONS',
-		BACK_BUTTON: 'BACK TO RESULTS'
+		NEXT_BUTTON: 'NEXT',
+		BACK_BUTTON: 'BACK',
+		CLOSE_BUTTON: 'CLOSE'
 	}
 } satisfies BaseTranslation;
 
