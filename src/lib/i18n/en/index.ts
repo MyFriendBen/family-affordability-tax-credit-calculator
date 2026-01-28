@@ -56,7 +56,8 @@ const en = {
 			},
 			CARE_WORKER: {
 				QUESTION: 'Do you regularly care for kids under 6 years old other than your own?',
-				SPOUSE_QUESTION: 'Does your spouse regularly care for kids under 6 years old other than your own?',
+				SPOUSE_QUESTION:
+					'Does your spouse regularly care for kids under 6 years old other than your own?',
 				HELP_TEXT:
 					'Care workers include **family, friends and neighbors** who regularly care for kids under 6 years old (about 14 hours per week) in addition to licensed childcare providers, home health aides, personal care aides, and nursing assistants.'
 			}
@@ -118,6 +119,107 @@ const en = {
 				'Make the most of your tax return with free banking, savings and financial planning services.',
 			BUTTON: 'VISIT SAVINGS COLLABORATIVE'
 		}
+	},
+	FILE_IN_PERSON_QUIZ: {
+		INTRO:
+			'Free, in-person tax help will be limited in 2026. The good news is that you may be able to file your taxes online for free, with step-by-step help, and get your refund faster. Answer a few simple questions below to see if online filing is a good option for you.',
+		QUESTIONS: {
+			COMPUTER_COMFORT: {
+				QUESTION:
+					'On a scale of 1-5, how comfortable do you feel using a computer? (with 1 being the least comfortable and 5 being the most comfortable)',
+				SCALE: {
+					1: '1 - Not comfortable',
+					2: '2',
+					3: '3',
+					4: '4',
+					5: '5 - Very comfortable'
+				}
+			},
+			TAX_COMFORT: {
+				QUESTION:
+					'On a scale of 1-5, how comfortable do you feel about filing your own taxes? (with 1 being the least comfortable and 5 being the most comfortable)',
+				SCALE: {
+					1: '1 - Not comfortable',
+					2: '2',
+					3: '3',
+					4: '4',
+					5: '5 - Very comfortable'
+				}
+			},
+			LIFE_EVENTS: {
+				QUESTION:
+					'Have you experienced one of these four life changing events in the past year? (Select all that apply)',
+				OPTIONS: {
+					BIRTH_ADOPTION: 'Birth or adoption of a child',
+					MARRIED: 'Married',
+					DIVORCED: 'Divorced or separated',
+					SPOUSE_DEATH: 'Death of a spouse'
+				}
+			},
+			CHILD_CARE: {
+				QUESTION: 'Do you regularly care for children other than your own who are age 6 or younger?'
+			},
+			W9_1099: {
+				QUESTION: 'Did you fill out a W9 to receive payment and/or did you receive a 1099?'
+			},
+			SSN_ITIN: {
+				QUESTION:
+					'Do you have a social security number or are you filing with an Individual Taxpayer Identification Number (ITIN)?',
+				OPTIONS: {
+					SSN: 'Social Security Number (SSN)',
+					ITIN: 'Individual Taxpayer Identification Number (ITIN)'
+				}
+			},
+			FILING_YEAR: {
+				QUESTION:
+					'Are you filing only for the 2025 tax year or are you filing for a different year or multiple years?',
+				OPTIONS: {
+					ONLY_2025: '2025 tax year only',
+					MULTIPLE: 'Different year or multiple years'
+				}
+			},
+			LANGUAGE_ASSISTANCE: {
+				QUESTION: 'Do you need assistance in a language other than English or Spanish?'
+			}
+		},
+		OUTCOMES: {
+			IN_PERSON_GOOD_FIT: {
+				COPY: 'In-person tax help is likely best for you. Click below to find a free tax help site and book an appointment early, if you can.',
+				BUTTON: 'FILE FOR FREE IN-PERSON'
+			},
+			IN_PERSON_STILL_SUITED: {
+				COPY: 'In-person tax help is likely best for you. Click below to find a free tax help site and book an appointment early, if you can.',
+				BUTTON: 'FILE FOR FREE IN-PERSON'
+			},
+			ONLINE_WITH_SUPPORT: {
+				COPY: 'Good news! Online tax filing may be a great fit for you. File online for free with help from a trained volunteer with the VITA program, so you can file with peace of mind and get your refund faster.',
+				PRIMARY_BUTTON: 'FILE FOR FREE ONLINE WITH SUPPORT',
+				IN_PERSON_LINK:
+					'Still want to see if there is capacity to help support you with free, in-person filing support? Click here'
+			},
+			OPTIMIZED_DIY: {
+				COPY: 'Good news! Online tax filing may be a great fit for you. File online for free with this optimized, do-it-yourself service and get access to your refund faster — often within 45 minutes after you file. Explore that DIY service below as well as two more supportive options.',
+				BUTTONS: {
+					DIY: 'OPTIMIZED & FREE DIY ONLINE FILING',
+					SUPPORT_25: 'FILE ONLINE WITH SUPPORT FOR $25',
+					PAID: 'OTHER PAID FILING OPTIONS WITH SUPPORT'
+				},
+				IN_PERSON_LINK:
+					'Still want to see if there is capacity to help support you with free, in-person filing support? Click here'
+			},
+			ONLINE_AND_OTHER: {
+				COPY: 'Good news! Online tax filing may be a great fit for you. Explore these options to file online, make taxes easier, and get your refund faster.',
+				BUTTONS: {
+					FREE_ONLINE: 'FILE FOR FREE ONLINE',
+					SUPPORT_25: 'FILE ONLINE WITH SUPPORT FOR $25',
+					PAID: 'OTHER PAID FILING OPTIONS WITH SUPPORT'
+				},
+				IN_PERSON_LINK:
+					'Still want to see if there is capacity to help support you with free, in-person filing support? Click here'
+			}
+		},
+		SUBMIT_BUTTON: 'SEE MY OPTIONS',
+		BACK_BUTTON: 'BACK TO RESULTS'
 	}
 } satisfies BaseTranslation;
 

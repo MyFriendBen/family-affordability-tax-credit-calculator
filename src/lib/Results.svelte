@@ -2,10 +2,20 @@
 	import type { TaxCredit } from './mfbApi';
 	import t, { locale } from '$lib/i18n/i18n-svelte';
 	import { onMount } from 'svelte';
-	import { generateLinks, generateMfbLink, generateSavingsCollaborativeLink, type Links } from './whiteLabelData';
+	import {
+		generateLinks,
+		generateMfbLink,
+		generateSavingsCollaborativeLink,
+		type Links
+	} from './whiteLabelData';
 	import { page } from '$app/stores';
+	import FileInPersonQuiz from './FileInPersonQuiz.svelte';
 
 	export let taxCredits: TaxCredit[];
+	export let yearlyIncome: number = 0;
+	export let isCareWorker: boolean = false;
+
+	let showQuiz = false;
 
 	let total = 0;
 	$: total = taxCredits.reduce((acc, credit) => acc + credit.value, 0);
@@ -43,81 +53,97 @@
 		const link = generateSavingsCollaborativeLink($locale);
 		window.open(link, '_blank');
 	}
+
+	function handleFileInPersonClick(event: MouseEvent) {
+		event.preventDefault();
+		showQuiz = true;
+		// Scroll to top of container when showing quiz
+		container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	}
 </script>
 
 <div class="container" bind:this={container}>
-	<h2 class="benefits-header">
-		<div class="primary-heading results-heading">{$t.RESULTS.TITLE_START()}</div>
-		{#if $locale === 'es'}
-			<div class="primary-heading results-heading">
-				{$t.RESULTS.TITLE_MIDDLE(formatNumber(total))}
+	{#if showQuiz}
+		<FileInPersonQuiz
+			{yearlyIncome}
+			{isCareWorker}
+			{whiteLabel}
+			onBack={() => (showQuiz = false)}
+		/>
+	{:else}
+		<h2 class="benefits-header">
+			<div class="primary-heading results-heading">{$t.RESULTS.TITLE_START()}</div>
+			{#if $locale === 'es'}
+				<div class="primary-heading results-heading">
+					{$t.RESULTS.TITLE_MIDDLE(formatNumber(total))}
+				</div>
+			{/if}
+			<div class="primary-heading results-heading">{$t.RESULTS.TITLE_END(formatNumber(total))}</div>
+		</h2>
+
+		{#if eligbleCredits.length > 0}
+			<div class="results-lists">
+				<div class="section tax-values">
+					<h3 class="secondary-heading">{$t.RESULTS.CREDITS_FOUND_TITLE(eligbleCredits.length)}</h3>
+					<ul>
+						{#each eligbleCredits as credit}
+							<li>{$t.RESULTS.CREDIT_NAMES[credit.id]()} {formatNumber(credit.value)}</li>
+						{/each}
+					</ul>
+				</div>
+
+				<!-- <div class="section"> -->
+				<!-- 	<h3 class="secondary-heading">{$t.RESULTS.REQUIRED_DOCUMENTS.TITLE()}</h3> -->
+				<!-- 	<ul> -->
+				<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.ID()}</li> -->
+				<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.SSN()}</li> -->
+				<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.BIRTH_DATES()}</li> -->
+				<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.W2()}</li> -->
+				<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.BANK_ACCOUNT()}</li> -->
+				<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.PRIOR_TAX_RETURNS()}</li> -->
+				<!-- 		<li> -->
+				<!-- 			{$t.RESULTS.REQUIRED_DOCUMENTS.IP_PIN()} -->
+				<!-- 			<a -->
+				<!-- 				href="http://irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin" -->
+				<!-- 				class="ip-pin-link">{$t.RESULTS.REQUIRED_DOCUMENTS.IP_PIN_LINK_TEXT()}</a -->
+				<!-- 			>. -->
+				<!-- 		</li> -->
+				<!-- 	</ul> -->
+				<!-- </div> -->
 			</div>
 		{/if}
-		<div class="primary-heading results-heading">{$t.RESULTS.TITLE_END(formatNumber(total))}</div>
-	</h2>
 
-	{#if eligbleCredits.length > 0}
-		<div class="results-lists">
-			<div class="section tax-values">
-				<h3 class="secondary-heading">{$t.RESULTS.CREDITS_FOUND_TITLE(eligbleCredits.length)}</h3>
-				<ul>
-					{#each eligbleCredits as credit}
-						<li>{$t.RESULTS.CREDIT_NAMES[credit.id]()} {formatNumber(credit.value)}</li>
-					{/each}
-				</ul>
+		<p class="disclaimer">* {$t.RESULTS.DISCLAIMER()}</p>
+
+		<div class="section links">
+			<h3 class="primary-heading ways-to-file">{$t.RESULTS.FILE_FOR_FREE.TITLE()}</h3>
+			<div class="link-container">
+				<a href={links.fileOnline} target="_blank" class="primary-button"
+					>{$t.RESULTS.FILE_FOR_FREE.ONLINE()}</a
+				>
 			</div>
-
-			<!-- <div class="section"> -->
-			<!-- 	<h3 class="secondary-heading">{$t.RESULTS.REQUIRED_DOCUMENTS.TITLE()}</h3> -->
-			<!-- 	<ul> -->
-			<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.ID()}</li> -->
-			<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.SSN()}</li> -->
-			<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.BIRTH_DATES()}</li> -->
-			<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.W2()}</li> -->
-			<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.BANK_ACCOUNT()}</li> -->
-			<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.PRIOR_TAX_RETURNS()}</li> -->
-			<!-- 		<li> -->
-			<!-- 			{$t.RESULTS.REQUIRED_DOCUMENTS.IP_PIN()} -->
-			<!-- 			<a -->
-			<!-- 				href="http://irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin" -->
-			<!-- 				class="ip-pin-link">{$t.RESULTS.REQUIRED_DOCUMENTS.IP_PIN_LINK_TEXT()}</a -->
-			<!-- 			>. -->
-			<!-- 		</li> -->
-			<!-- 	</ul> -->
-			<!-- </div> -->
+			<div class="link-container">
+				<button type="button" class="primary-button" on:click={handleFileInPersonClick}
+					>{$t.RESULTS.FILE_FOR_FREE.IN_PERSON()}</button
+				>
+			</div>
+			<h3 class="primary-heading other-filing-options ways-to-file">
+				{$t.RESULTS.OTHER_FILING_OPTIONS.TITLE()}
+			</h3>
+			<div class="link-container">
+				<a href={links.paidFiling} target="_blank" class="primary-button"
+					>{$t.RESULTS.OTHER_FILING_OPTIONS.PAID()}</a
+				>
+			</div>
+			<div class="link-container">
+				<a
+					href="https://www.freetaxusa.com/?utm_source=get_ahead_colorado"
+					target="_blank"
+					class="primary-button">{$t.RESULTS.OTHER_FILING_OPTIONS.FREE_TAX_USA()}</a
+				>
+			</div>
 		</div>
 	{/if}
-
-	<p class="disclaimer">* {$t.RESULTS.DISCLAIMER()}</p>
-
-	<div class="section links">
-		<h3 class="primary-heading ways-to-file">{$t.RESULTS.FILE_FOR_FREE.TITLE()}</h3>
-		<div class="link-container">
-			<a href={links.fileOnline} target="_blank" class="primary-button"
-				>{$t.RESULTS.FILE_FOR_FREE.ONLINE()}</a
-			>
-		</div>
-		<div class="link-container">
-			<a href={links.fileInPerson} target="_blank" class="primary-button"
-				>{$t.RESULTS.FILE_FOR_FREE.IN_PERSON()}</a
-			>
-		</div>
-		<h3 class="primary-heading other-filing-options ways-to-file">
-			{$t.RESULTS.OTHER_FILING_OPTIONS.TITLE()}
-		</h3>
-		<div class="link-container">
-			<a href={links.paidFiling} target="_blank" class="primary-button"
-				>{$t.RESULTS.OTHER_FILING_OPTIONS.PAID()}</a
-			>
-		</div>
-		<div class="link-container">
-			<a
-				href="https://www.freetaxusa.com/?utm_source=get_ahead_colorado"
-				target="_blank"
-				class="primary-button">{$t.RESULTS.OTHER_FILING_OPTIONS.FREE_TAX_USA()}</a
-			>
-		</div>
-	</div>
 </div>
 
 <h2 class="primary-heading">{$t.RESULTS.MFB.TITLE()}</h2>

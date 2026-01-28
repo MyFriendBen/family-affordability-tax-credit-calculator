@@ -55,7 +55,8 @@ const es = {
 			},
 			CARE_WORKER: {
 				QUESTION: '¿Cuida regularmente a niños menores de 6 años que no son suyos?',
-				SPOUSE_QUESTION: '¿Su cónyuge cuida regularmente a niños menores de 6 años que no son suyos?',
+				SPOUSE_QUESTION:
+					'¿Su cónyuge cuida regularmente a niños menores de 6 años que no son suyos?',
 				HELP_TEXT:
 					'Los trabajadores de cuidado incluyen **familiares, amigos y vecinos** que cuidan regularmente a niños menores de 6 años (aproximadamente 14 horas por semana), además de proveedores profesionales de cuidado infantil, asistentes de salud en el hogar, asistentes de cuidado personal y asistentes de enfermería.'
 			}
@@ -118,6 +119,107 @@ const es = {
 				'Aproveche al máximo su reembolso de impuestos con servicios gratuitos de banca, ahorro y planificación financiera.',
 			BUTTON: 'VISITAR SAVINGS COLLABORATIVE'
 		}
+	},
+	FILE_IN_PERSON_QUIZ: {
+		INTRO:
+			'La ayuda gratuita para presentar impuestos en persona será limitada en 2026. La buena noticia es que puede presentar sus impuestos en línea de forma gratuita, con ayuda paso a paso, y recibir su reembolso más rápido. Responda algunas preguntas simples a continuación para ver si presentar en línea es una buena opción para usted.',
+		QUESTIONS: {
+			COMPUTER_COMFORT: {
+				QUESTION:
+					'En una escala del 1 al 5, ¿qué tan cómodo se siente usando una computadora? (siendo 1 el menos cómodo y 5 el más cómodo)',
+				SCALE: {
+					1: '1 - Nada cómodo',
+					2: '2',
+					3: '3',
+					4: '4',
+					5: '5 - Muy cómodo'
+				}
+			},
+			TAX_COMFORT: {
+				QUESTION:
+					'En una escala del 1 al 5, ¿qué tan cómodo se siente presentando sus propios impuestos? (siendo 1 el menos cómodo y 5 el más cómodo)',
+				SCALE: {
+					1: '1 - Nada cómodo',
+					2: '2',
+					3: '3',
+					4: '4',
+					5: '5 - Muy cómodo'
+				}
+			},
+			LIFE_EVENTS: {
+				QUESTION:
+					'¿Ha experimentado uno de estos cuatro eventos importantes en el último año? (Seleccione todos los que apliquen)',
+				OPTIONS: {
+					BIRTH_ADOPTION: 'Nacimiento o adopción de un hijo',
+					MARRIED: 'Matrimonio',
+					DIVORCED: 'Divorcio o separación',
+					SPOUSE_DEATH: 'Fallecimiento de cónyuge'
+				}
+			},
+			CHILD_CARE: {
+				QUESTION: '¿Cuida regularmente a niños que no son suyos y que tienen 6 años o menos?'
+			},
+			W9_1099: {
+				QUESTION: '¿Llenó un formulario W9 para recibir pago y/o recibió un formulario 1099?'
+			},
+			SSN_ITIN: {
+				QUESTION:
+					'¿Tiene un número de Seguro Social o presenta sus impuestos con un Número de Identificación Personal del Contribuyente (ITIN)?',
+				OPTIONS: {
+					SSN: 'Número de Seguro Social (SSN)',
+					ITIN: 'Número de Identificación Personal del Contribuyente (ITIN)'
+				}
+			},
+			FILING_YEAR: {
+				QUESTION:
+					'¿Está presentando solo para el año fiscal 2025 o está presentando para un año diferente o varios años?',
+				OPTIONS: {
+					ONLY_2025: 'Solo año fiscal 2025',
+					MULTIPLE: 'Año diferente o varios años'
+				}
+			},
+			LANGUAGE_ASSISTANCE: {
+				QUESTION: '¿Necesita asistencia en un idioma que no sea inglés o español?'
+			}
+		},
+		OUTCOMES: {
+			IN_PERSON_GOOD_FIT: {
+				COPY: 'La ayuda en persona para impuestos probablemente sea lo mejor para usted. Haga clic abajo para encontrar un sitio de ayuda tributaria gratuita y reserve una cita con anticipación, si puede.',
+				BUTTON: 'PRESENTAR GRATIS EN PERSONA'
+			},
+			IN_PERSON_STILL_SUITED: {
+				COPY: 'La ayuda en persona para impuestos probablemente sea lo mejor para usted. Haga clic abajo para encontrar un sitio de ayuda tributaria gratuita y reserve una cita con anticipación, si puede.',
+				BUTTON: 'PRESENTAR GRATIS EN PERSONA'
+			},
+			ONLINE_WITH_SUPPORT: {
+				COPY: '¡Buenas noticias! Presentar impuestos en línea puede ser una excelente opción para usted. Presente en línea gratis con la ayuda de un voluntario capacitado del programa VITA, para que pueda presentar con tranquilidad y recibir su reembolso más rápido.',
+				PRIMARY_BUTTON: 'PRESENTAR GRATIS EN LÍNEA CON APOYO',
+				IN_PERSON_LINK:
+					'¿Aún desea ver si hay capacidad para ayudarlo con apoyo gratuito para presentar en persona? Haga clic aquí'
+			},
+			OPTIMIZED_DIY: {
+				COPY: '¡Buenas noticias! Presentar impuestos en línea puede ser una excelente opción para usted. Presente en línea gratis con este servicio optimizado de hágalo usted mismo y obtenga acceso a su reembolso más rápido, a menudo dentro de los 45 minutos después de presentar. Explore ese servicio a continuación, así como dos opciones más con apoyo.',
+				BUTTONS: {
+					DIY: 'PRESENTACIÓN EN LÍNEA GRATUITA Y OPTIMIZADA',
+					SUPPORT_25: 'PRESENTAR EN LÍNEA CON APOYO POR $25',
+					PAID: 'OTRAS OPCIONES DE PAGO CON APOYO'
+				},
+				IN_PERSON_LINK:
+					'¿Aún desea ver si hay capacidad para ayudarlo con apoyo gratuito para presentar en persona? Haga clic aquí'
+			},
+			ONLINE_AND_OTHER: {
+				COPY: '¡Buenas noticias! Presentar impuestos en línea puede ser una excelente opción para usted. Explore estas opciones para presentar en línea, facilitar sus impuestos y recibir su reembolso más rápido.',
+				BUTTONS: {
+					FREE_ONLINE: 'PRESENTAR GRATIS EN LÍNEA',
+					SUPPORT_25: 'PRESENTAR EN LÍNEA CON APOYO POR $25',
+					PAID: 'OTRAS OPCIONES DE PAGO CON APOYO'
+				},
+				IN_PERSON_LINK:
+					'¿Aún desea ver si hay capacidad para ayudarlo con apoyo gratuito para presentar en persona? Haga clic aquí'
+			}
+		},
+		SUBMIT_BUTTON: 'VER MIS OPCIONES',
+		BACK_BUTTON: 'VOLVER A RESULTADOS'
 	}
 } satisfies Translation;
 
