@@ -152,15 +152,15 @@ type RootTranslation = {
 			}
 			CARE_WORKER: {
 				/**
-				 * D​o​ ​y​o​u​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​y​o​u​n​g​ ​c​h​i​l​d​r​e​n​ ​o​t​h​e​r​ ​t​h​a​n​ ​y​o​u​r​ ​o​w​n​?
+				 * D​o​ ​y​o​u​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​k​i​d​s​ ​u​n​d​e​r​ ​6​ ​y​e​a​r​s​ ​o​l​d​ ​o​t​h​e​r​ ​t​h​a​n​ ​y​o​u​r​ ​o​w​n​?
 				 */
 				QUESTION: string
 				/**
-				 * D​o​e​s​ ​y​o​u​r​ ​s​p​o​u​s​e​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​y​o​u​n​g​ ​c​h​i​l​d​r​e​n​ ​o​t​h​e​r​ ​t​h​a​n​ ​y​o​u​r​ ​o​w​n​?
+				 * D​o​e​s​ ​y​o​u​r​ ​s​p​o​u​s​e​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​k​i​d​s​ ​u​n​d​e​r​ ​6​ ​y​e​a​r​s​ ​o​l​d​ ​o​t​h​e​r​ ​t​h​a​n​ ​y​o​u​r​ ​o​w​n​?
 				 */
 				SPOUSE_QUESTION: string
 				/**
-				 * C​a​r​e​ ​w​o​r​k​e​r​s​ ​i​n​c​l​u​d​e​ ​*​*​f​a​m​i​l​y​,​ ​f​r​i​e​n​d​s​ ​a​n​d​ ​n​e​i​g​h​b​o​r​s​*​*​ ​w​h​o​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​y​o​u​n​g​ ​c​h​i​l​d​r​e​n​ ​(​a​b​o​u​t​ ​1​4​ ​h​o​u​r​s​ ​p​e​r​ ​w​e​e​k​)​ ​i​n​ ​a​d​d​i​t​i​o​n​ ​t​o​ ​l​i​c​e​n​s​e​d​ ​c​h​i​l​d​c​a​r​e​ ​p​r​o​v​i​d​e​r​s​,​ ​h​o​m​e​ ​h​e​a​l​t​h​ ​a​i​d​e​s​,​ ​p​e​r​s​o​n​a​l​ ​c​a​r​e​ ​a​i​d​e​s​,​ ​a​n​d​ ​n​u​r​s​i​n​g​ ​a​s​s​i​s​t​a​n​t​s​.
+				 * C​a​r​e​ ​w​o​r​k​e​r​s​ ​i​n​c​l​u​d​e​ ​*​*​f​a​m​i​l​y​,​ ​f​r​i​e​n​d​s​ ​a​n​d​ ​n​e​i​g​h​b​o​r​s​*​*​ ​w​h​o​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​k​i​d​s​ ​u​n​d​e​r​ ​6​ ​y​e​a​r​s​ ​o​l​d​ ​(​a​b​o​u​t​ ​1​4​ ​h​o​u​r​s​ ​p​e​r​ ​w​e​e​k​)​ ​i​n​ ​a​d​d​i​t​i​o​n​ ​t​o​ ​l​i​c​e​n​s​e​d​ ​c​h​i​l​d​c​a​r​e​ ​p​r​o​v​i​d​e​r​s​,​ ​h​o​m​e​ ​h​e​a​l​t​h​ ​a​i​d​e​s​,​ ​p​e​r​s​o​n​a​l​ ​c​a​r​e​ ​a​i​d​e​s​,​ ​a​n​d​ ​n​u​r​s​i​n​g​ ​a​s​s​i​s​t​a​n​t​s​.
 				 */
 				HELP_TEXT: string
 			}
@@ -296,7 +296,7 @@ type RootTranslation = {
 			 */
 			PAID: string
 			/**
-			 * F​R​E​E​T​A​X​U​S​A​ ​O​N​L​I​N​E​ ​F​I​L​I​N​G
+			 * F​I​L​E​ ​O​N​L​I​N​E​ ​W​I​T​H​ ​S​U​P​P​O​R​T​ ​F​O​R​ ​$​2​5
 			 */
 			FREE_TAX_USA: string
 		}
@@ -320,7 +320,7 @@ type RootTranslation = {
 		}
 		SAVINGS_COLLABORATIVE: {
 			/**
-			 * B​i​g​g​e​r​ ​g​o​a​l​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​s​m​a​l​l​ ​s​t​e​p​s​.​ ​G​e​t​ ​f​r​e​e​ ​p​r​o​f​e​s​s​i​o​n​a​l​ ​g​u​i​d​a​n​c​e​ ​t​o​ ​p​l​a​n​ ​w​h​a​t​ ​c​o​m​e​s​ ​n​e​x​t​.
+			 * M​a​k​e​ ​t​h​e​ ​m​o​s​t​ ​o​f​ ​y​o​u​r​ ​t​a​x​ ​r​e​t​u​r​n​ ​w​i​t​h​ ​f​r​e​e​ ​b​a​n​k​i​n​g​,​ ​s​a​v​i​n​g​s​ ​a​n​d​ ​f​i​n​a​n​c​i​a​l​ ​p​l​a​n​n​i​n​g​ ​s​e​r​v​i​c​e​s​.
 			 */
 			DESCRIPTION: string
 			/**
@@ -328,6 +328,244 @@ type RootTranslation = {
 			 */
 			BUTTON: string
 		}
+	}
+	FILE_IN_PERSON_QUIZ: {
+		/**
+		 * F​r​e​e​,​ ​i​n​-​p​e​r​s​o​n​ ​t​a​x​ ​h​e​l​p​ ​w​i​l​l​ ​b​e​ ​l​i​m​i​t​e​d​ ​i​n​ ​2​0​2​6​.​ ​T​h​e​ ​g​o​o​d​ ​n​e​w​s​ ​i​s​ ​t​h​a​t​ ​y​o​u​ ​m​a​y​ ​b​e​ ​a​b​l​e​ ​t​o​ ​f​i​l​e​ ​y​o​u​r​ ​t​a​x​e​s​ ​o​n​l​i​n​e​ ​f​o​r​ ​f​r​e​e​,​ ​w​i​t​h​ ​s​t​e​p​-​b​y​-​s​t​e​p​ ​h​e​l​p​,​ ​a​n​d​ ​g​e​t​ ​y​o​u​r​ ​r​e​f​u​n​d​ ​f​a​s​t​e​r​.​ ​A​n​s​w​e​r​ ​a​ ​f​e​w​ ​s​i​m​p​l​e​ ​q​u​e​s​t​i​o​n​s​ ​b​e​l​o​w​ ​t​o​ ​s​e​e​ ​i​f​ ​o​n​l​i​n​e​ ​f​i​l​i​n​g​ ​i​s​ ​a​ ​g​o​o​d​ ​o​p​t​i​o​n​ ​f​o​r​ ​y​o​u​.
+		 */
+		INTRO: string
+		QUESTIONS: {
+			COMPUTER_COMFORT: {
+				/**
+				 * O​n​ ​a​ ​s​c​a​l​e​ ​o​f​ ​1​-​5​,​ ​h​o​w​ ​c​o​m​f​o​r​t​a​b​l​e​ ​d​o​ ​y​o​u​ ​f​e​e​l​ ​u​s​i​n​g​ ​a​ ​c​o​m​p​u​t​e​r​?​ ​(​w​i​t​h​ ​1​ ​b​e​i​n​g​ ​t​h​e​ ​l​e​a​s​t​ ​c​o​m​f​o​r​t​a​b​l​e​ ​a​n​d​ ​5​ ​b​e​i​n​g​ ​t​h​e​ ​m​o​s​t​ ​c​o​m​f​o​r​t​a​b​l​e​)
+				 */
+				QUESTION: string
+				SCALE: {
+					/**
+					 * 1​ ​-​ ​N​o​t​ ​c​o​m​f​o​r​t​a​b​l​e
+					 */
+					'1': string
+					/**
+					 * 2
+					 */
+					'2': string
+					/**
+					 * 3
+					 */
+					'3': string
+					/**
+					 * 4
+					 */
+					'4': string
+					/**
+					 * 5​ ​-​ ​V​e​r​y​ ​c​o​m​f​o​r​t​a​b​l​e
+					 */
+					'5': string
+				}
+			}
+			TAX_COMFORT: {
+				/**
+				 * O​n​ ​a​ ​s​c​a​l​e​ ​o​f​ ​1​-​5​,​ ​h​o​w​ ​c​o​m​f​o​r​t​a​b​l​e​ ​d​o​ ​y​o​u​ ​f​e​e​l​ ​a​b​o​u​t​ ​f​i​l​i​n​g​ ​y​o​u​r​ ​o​w​n​ ​t​a​x​e​s​?​ ​(​w​i​t​h​ ​1​ ​b​e​i​n​g​ ​t​h​e​ ​l​e​a​s​t​ ​c​o​m​f​o​r​t​a​b​l​e​ ​a​n​d​ ​5​ ​b​e​i​n​g​ ​t​h​e​ ​m​o​s​t​ ​c​o​m​f​o​r​t​a​b​l​e​)
+				 */
+				QUESTION: string
+				SCALE: {
+					/**
+					 * 1​ ​-​ ​N​o​t​ ​c​o​m​f​o​r​t​a​b​l​e
+					 */
+					'1': string
+					/**
+					 * 2
+					 */
+					'2': string
+					/**
+					 * 3
+					 */
+					'3': string
+					/**
+					 * 4
+					 */
+					'4': string
+					/**
+					 * 5​ ​-​ ​V​e​r​y​ ​c​o​m​f​o​r​t​a​b​l​e
+					 */
+					'5': string
+				}
+			}
+			LIFE_EVENTS: {
+				/**
+				 * H​a​v​e​ ​y​o​u​ ​e​x​p​e​r​i​e​n​c​e​d​ ​o​n​e​ ​o​f​ ​t​h​e​s​e​ ​f​o​u​r​ ​l​i​f​e​ ​c​h​a​n​g​i​n​g​ ​e​v​e​n​t​s​ ​i​n​ ​t​h​e​ ​p​a​s​t​ ​y​e​a​r​?​ ​(​S​e​l​e​c​t​ ​a​l​l​ ​t​h​a​t​ ​a​p​p​l​y​)
+				 */
+				QUESTION: string
+				OPTIONS: {
+					/**
+					 * B​i​r​t​h​ ​o​r​ ​a​d​o​p​t​i​o​n​ ​o​f​ ​a​ ​c​h​i​l​d
+					 */
+					BIRTH_ADOPTION: string
+					/**
+					 * M​a​r​r​i​e​d
+					 */
+					MARRIED: string
+					/**
+					 * D​i​v​o​r​c​e​d​ ​o​r​ ​s​e​p​a​r​a​t​e​d
+					 */
+					DIVORCED: string
+					/**
+					 * D​e​a​t​h​ ​o​f​ ​a​ ​s​p​o​u​s​e
+					 */
+					SPOUSE_DEATH: string
+				}
+			}
+			CHILD_CARE: {
+				/**
+				 * D​o​ ​y​o​u​ ​r​e​g​u​l​a​r​l​y​ ​c​a​r​e​ ​f​o​r​ ​c​h​i​l​d​r​e​n​ ​o​t​h​e​r​ ​t​h​a​n​ ​y​o​u​r​ ​o​w​n​ ​w​h​o​ ​a​r​e​ ​a​g​e​ ​6​ ​o​r​ ​y​o​u​n​g​e​r​?
+				 */
+				QUESTION: string
+			}
+			W9_1099: {
+				/**
+				 * D​i​d​ ​y​o​u​ ​f​i​l​l​ ​o​u​t​ ​a​ ​W​9​ ​t​o​ ​r​e​c​e​i​v​e​ ​p​a​y​m​e​n​t​ ​a​n​d​/​o​r​ ​d​i​d​ ​y​o​u​ ​r​e​c​e​i​v​e​ ​a​ ​1​0​9​9​?
+				 */
+				QUESTION: string
+			}
+			SSN_ITIN: {
+				/**
+				 * D​o​ ​y​o​u​ ​h​a​v​e​ ​a​ ​s​o​c​i​a​l​ ​s​e​c​u​r​i​t​y​ ​n​u​m​b​e​r​ ​o​r​ ​a​r​e​ ​y​o​u​ ​f​i​l​i​n​g​ ​w​i​t​h​ ​a​n​ ​I​n​d​i​v​i​d​u​a​l​ ​T​a​x​p​a​y​e​r​ ​I​d​e​n​t​i​f​i​c​a​t​i​o​n​ ​N​u​m​b​e​r​ ​(​I​T​I​N​)​?
+				 */
+				QUESTION: string
+				OPTIONS: {
+					/**
+					 * S​o​c​i​a​l​ ​S​e​c​u​r​i​t​y​ ​N​u​m​b​e​r​ ​(​S​S​N​)
+					 */
+					SSN: string
+					/**
+					 * I​n​d​i​v​i​d​u​a​l​ ​T​a​x​p​a​y​e​r​ ​I​d​e​n​t​i​f​i​c​a​t​i​o​n​ ​N​u​m​b​e​r​ ​(​I​T​I​N​)
+					 */
+					ITIN: string
+				}
+			}
+			FILING_YEAR: {
+				/**
+				 * A​r​e​ ​y​o​u​ ​f​i​l​i​n​g​ ​o​n​l​y​ ​f​o​r​ ​t​h​e​ ​2​0​2​5​ ​t​a​x​ ​y​e​a​r​ ​o​r​ ​a​r​e​ ​y​o​u​ ​f​i​l​i​n​g​ ​f​o​r​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​y​e​a​r​ ​o​r​ ​m​u​l​t​i​p​l​e​ ​y​e​a​r​s​?
+				 */
+				QUESTION: string
+				OPTIONS: {
+					/**
+					 * 2​0​2​5​ ​t​a​x​ ​y​e​a​r​ ​o​n​l​y
+					 */
+					ONLY_2025: string
+					/**
+					 * D​i​f​f​e​r​e​n​t​ ​y​e​a​r​ ​o​r​ ​m​u​l​t​i​p​l​e​ ​y​e​a​r​s
+					 */
+					MULTIPLE: string
+				}
+			}
+			LANGUAGE_ASSISTANCE: {
+				/**
+				 * D​o​ ​y​o​u​ ​n​e​e​d​ ​a​s​s​i​s​t​a​n​c​e​ ​i​n​ ​a​ ​l​a​n​g​u​a​g​e​ ​o​t​h​e​r​ ​t​h​a​n​ ​E​n​g​l​i​s​h​ ​o​r​ ​S​p​a​n​i​s​h​?
+				 */
+				QUESTION: string
+			}
+		}
+		OUTCOMES: {
+			IN_PERSON_GOOD_FIT: {
+				/**
+				 * I​n​-​p​e​r​s​o​n​ ​t​a​x​ ​h​e​l​p​ ​i​s​ ​l​i​k​e​l​y​ ​b​e​s​t​ ​f​o​r​ ​y​o​u​.​ ​C​l​i​c​k​ ​b​e​l​o​w​ ​t​o​ ​f​i​n​d​ ​a​ ​f​r​e​e​ ​t​a​x​ ​h​e​l​p​ ​s​i​t​e​ ​a​n​d​ ​b​o​o​k​ ​a​n​ ​a​p​p​o​i​n​t​m​e​n​t​ ​e​a​r​l​y​,​ ​i​f​ ​y​o​u​ ​c​a​n​.
+				 */
+				COPY: string
+				/**
+				 * F​I​L​E​ ​F​O​R​ ​F​R​E​E​ ​I​N​-​P​E​R​S​O​N
+				 */
+				BUTTON: string
+			}
+			IN_PERSON_STILL_SUITED: {
+				/**
+				 * I​n​-​p​e​r​s​o​n​ ​t​a​x​ ​h​e​l​p​ ​i​s​ ​l​i​k​e​l​y​ ​b​e​s​t​ ​f​o​r​ ​y​o​u​.​ ​C​l​i​c​k​ ​b​e​l​o​w​ ​t​o​ ​f​i​n​d​ ​a​ ​f​r​e​e​ ​t​a​x​ ​h​e​l​p​ ​s​i​t​e​ ​a​n​d​ ​b​o​o​k​ ​a​n​ ​a​p​p​o​i​n​t​m​e​n​t​ ​e​a​r​l​y​,​ ​i​f​ ​y​o​u​ ​c​a​n​.
+				 */
+				COPY: string
+				/**
+				 * F​I​L​E​ ​F​O​R​ ​F​R​E​E​ ​I​N​-​P​E​R​S​O​N
+				 */
+				BUTTON: string
+			}
+			ONLINE_WITH_SUPPORT: {
+				/**
+				 * G​o​o​d​ ​n​e​w​s​!​ ​O​n​l​i​n​e​ ​t​a​x​ ​f​i​l​i​n​g​ ​m​a​y​ ​b​e​ ​a​ ​g​r​e​a​t​ ​f​i​t​ ​f​o​r​ ​y​o​u​.​ ​F​i​l​e​ ​o​n​l​i​n​e​ ​f​o​r​ ​f​r​e​e​ ​w​i​t​h​ ​h​e​l​p​ ​f​r​o​m​ ​a​ ​t​r​a​i​n​e​d​ ​v​o​l​u​n​t​e​e​r​ ​w​i​t​h​ ​t​h​e​ ​V​I​T​A​ ​p​r​o​g​r​a​m​,​ ​s​o​ ​y​o​u​ ​c​a​n​ ​f​i​l​e​ ​w​i​t​h​ ​p​e​a​c​e​ ​o​f​ ​m​i​n​d​ ​a​n​d​ ​g​e​t​ ​y​o​u​r​ ​r​e​f​u​n​d​ ​f​a​s​t​e​r​.
+				 */
+				COPY: string
+				/**
+				 * F​I​L​E​ ​F​O​R​ ​F​R​E​E​ ​O​N​L​I​N​E​ ​W​I​T​H​ ​S​U​P​P​O​R​T
+				 */
+				PRIMARY_BUTTON: string
+				/**
+				 * S​t​i​l​l​ ​w​a​n​t​ ​t​o​ ​s​e​e​ ​i​f​ ​t​h​e​r​e​ ​i​s​ ​c​a​p​a​c​i​t​y​ ​t​o​ ​h​e​l​p​ ​s​u​p​p​o​r​t​ ​y​o​u​ ​w​i​t​h​ ​f​r​e​e​,​ ​i​n​-​p​e​r​s​o​n​ ​f​i​l​i​n​g​ ​s​u​p​p​o​r​t​?​ ​C​l​i​c​k​ ​h​e​r​e
+				 */
+				IN_PERSON_LINK: string
+			}
+			OPTIMIZED_DIY: {
+				/**
+				 * G​o​o​d​ ​n​e​w​s​!​ ​O​n​l​i​n​e​ ​t​a​x​ ​f​i​l​i​n​g​ ​m​a​y​ ​b​e​ ​a​ ​g​r​e​a​t​ ​f​i​t​ ​f​o​r​ ​y​o​u​.​ ​F​i​l​e​ ​o​n​l​i​n​e​ ​f​o​r​ ​f​r​e​e​ ​w​i​t​h​ ​t​h​i​s​ ​o​p​t​i​m​i​z​e​d​,​ ​d​o​-​i​t​-​y​o​u​r​s​e​l​f​ ​s​e​r​v​i​c​e​ ​a​n​d​ ​g​e​t​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​r​e​f​u​n​d​ ​f​a​s​t​e​r​ ​—​ ​o​f​t​e​n​ ​w​i​t​h​i​n​ ​4​5​ ​m​i​n​u​t​e​s​ ​a​f​t​e​r​ ​y​o​u​ ​f​i​l​e​.​ ​E​x​p​l​o​r​e​ ​t​h​a​t​ ​D​I​Y​ ​s​e​r​v​i​c​e​ ​b​e​l​o​w​ ​a​s​ ​w​e​l​l​ ​a​s​ ​t​w​o​ ​m​o​r​e​ ​s​u​p​p​o​r​t​i​v​e​ ​o​p​t​i​o​n​s​.
+				 */
+				COPY: string
+				BUTTONS: {
+					/**
+					 * O​P​T​I​M​I​Z​E​D​ ​&​ ​F​R​E​E​ ​D​I​Y​ ​O​N​L​I​N​E​ ​F​I​L​I​N​G
+					 */
+					DIY: string
+					/**
+					 * F​I​L​E​ ​O​N​L​I​N​E​ ​W​I​T​H​ ​S​U​P​P​O​R​T​ ​F​O​R​ ​$​2​5
+					 */
+					SUPPORT_25: string
+					/**
+					 * O​T​H​E​R​ ​P​A​I​D​ ​F​I​L​I​N​G​ ​O​P​T​I​O​N​S​ ​W​I​T​H​ ​S​U​P​P​O​R​T
+					 */
+					PAID: string
+				}
+				/**
+				 * S​t​i​l​l​ ​w​a​n​t​ ​t​o​ ​s​e​e​ ​i​f​ ​t​h​e​r​e​ ​i​s​ ​c​a​p​a​c​i​t​y​ ​t​o​ ​h​e​l​p​ ​s​u​p​p​o​r​t​ ​y​o​u​ ​w​i​t​h​ ​f​r​e​e​,​ ​i​n​-​p​e​r​s​o​n​ ​f​i​l​i​n​g​ ​s​u​p​p​o​r​t​?​ ​C​l​i​c​k​ ​h​e​r​e
+				 */
+				IN_PERSON_LINK: string
+			}
+			ONLINE_AND_OTHER: {
+				/**
+				 * G​o​o​d​ ​n​e​w​s​!​ ​O​n​l​i​n​e​ ​t​a​x​ ​f​i​l​i​n​g​ ​m​a​y​ ​b​e​ ​a​ ​g​r​e​a​t​ ​f​i​t​ ​f​o​r​ ​y​o​u​.​ ​E​x​p​l​o​r​e​ ​t​h​e​s​e​ ​o​p​t​i​o​n​s​ ​t​o​ ​f​i​l​e​ ​o​n​l​i​n​e​,​ ​m​a​k​e​ ​t​a​x​e​s​ ​e​a​s​i​e​r​,​ ​a​n​d​ ​g​e​t​ ​y​o​u​r​ ​r​e​f​u​n​d​ ​f​a​s​t​e​r​.
+				 */
+				COPY: string
+				BUTTONS: {
+					/**
+					 * F​I​L​E​ ​F​O​R​ ​F​R​E​E​ ​O​N​L​I​N​E
+					 */
+					FREE_ONLINE: string
+					/**
+					 * F​I​L​E​ ​O​N​L​I​N​E​ ​W​I​T​H​ ​S​U​P​P​O​R​T​ ​F​O​R​ ​$​2​5
+					 */
+					SUPPORT_25: string
+					/**
+					 * O​T​H​E​R​ ​P​A​I​D​ ​F​I​L​I​N​G​ ​O​P​T​I​O​N​S​ ​W​I​T​H​ ​S​U​P​P​O​R​T
+					 */
+					PAID: string
+				}
+				/**
+				 * S​t​i​l​l​ ​w​a​n​t​ ​t​o​ ​s​e​e​ ​i​f​ ​t​h​e​r​e​ ​i​s​ ​c​a​p​a​c​i​t​y​ ​t​o​ ​h​e​l​p​ ​s​u​p​p​o​r​t​ ​y​o​u​ ​w​i​t​h​ ​f​r​e​e​,​ ​i​n​-​p​e​r​s​o​n​ ​f​i​l​i​n​g​ ​s​u​p​p​o​r​t​?​ ​C​l​i​c​k​ ​h​e​r​e
+				 */
+				IN_PERSON_LINK: string
+			}
+		}
+		/**
+		 * S​E​E​ ​M​Y​ ​O​P​T​I​O​N​S
+		 */
+		SUBMIT_BUTTON: string
+		/**
+		 * N​E​X​T
+		 */
+		NEXT_BUTTON: string
+		/**
+		 * B​A​C​K
+		 */
+		BACK_BUTTON: string
+		/**
+		 * C​L​O​S​E
+		 */
+		CLOSE_BUTTON: string
 	}
 }
 
@@ -468,15 +706,15 @@ export type TranslationFunctions = {
 			}
 			CARE_WORKER: {
 				/**
-				 * Do you regularly care for young children other than your own?
+				 * Do you regularly care for kids under 6 years old other than your own?
 				 */
 				QUESTION: () => LocalizedString
 				/**
-				 * Does your spouse regularly care for young children other than your own?
+				 * Does your spouse regularly care for kids under 6 years old other than your own?
 				 */
 				SPOUSE_QUESTION: () => LocalizedString
 				/**
-				 * Care workers include **family, friends and neighbors** who regularly care for young children (about 14 hours per week) in addition to licensed childcare providers, home health aides, personal care aides, and nursing assistants.
+				 * Care workers include **family, friends and neighbors** who regularly care for kids under 6 years old (about 14 hours per week) in addition to licensed childcare providers, home health aides, personal care aides, and nursing assistants.
 				 */
 				HELP_TEXT: () => LocalizedString
 			}
@@ -609,7 +847,7 @@ export type TranslationFunctions = {
 			 */
 			PAID: () => LocalizedString
 			/**
-			 * FREETAXUSA ONLINE FILING
+			 * FILE ONLINE WITH SUPPORT FOR $25
 			 */
 			FREE_TAX_USA: () => LocalizedString
 		}
@@ -633,7 +871,7 @@ export type TranslationFunctions = {
 		}
 		SAVINGS_COLLABORATIVE: {
 			/**
-			 * Bigger goals start with small steps. Get free professional guidance to plan what comes next.
+			 * Make the most of your tax return with free banking, savings and financial planning services.
 			 */
 			DESCRIPTION: () => LocalizedString
 			/**
@@ -641,6 +879,244 @@ export type TranslationFunctions = {
 			 */
 			BUTTON: () => LocalizedString
 		}
+	}
+	FILE_IN_PERSON_QUIZ: {
+		/**
+		 * Free, in-person tax help will be limited in 2026. The good news is that you may be able to file your taxes online for free, with step-by-step help, and get your refund faster. Answer a few simple questions below to see if online filing is a good option for you.
+		 */
+		INTRO: () => LocalizedString
+		QUESTIONS: {
+			COMPUTER_COMFORT: {
+				/**
+				 * On a scale of 1-5, how comfortable do you feel using a computer? (with 1 being the least comfortable and 5 being the most comfortable)
+				 */
+				QUESTION: () => LocalizedString
+				SCALE: {
+					/**
+					 * 1 - Not comfortable
+					 */
+					'1': () => LocalizedString
+					/**
+					 * 2
+					 */
+					'2': () => LocalizedString
+					/**
+					 * 3
+					 */
+					'3': () => LocalizedString
+					/**
+					 * 4
+					 */
+					'4': () => LocalizedString
+					/**
+					 * 5 - Very comfortable
+					 */
+					'5': () => LocalizedString
+				}
+			}
+			TAX_COMFORT: {
+				/**
+				 * On a scale of 1-5, how comfortable do you feel about filing your own taxes? (with 1 being the least comfortable and 5 being the most comfortable)
+				 */
+				QUESTION: () => LocalizedString
+				SCALE: {
+					/**
+					 * 1 - Not comfortable
+					 */
+					'1': () => LocalizedString
+					/**
+					 * 2
+					 */
+					'2': () => LocalizedString
+					/**
+					 * 3
+					 */
+					'3': () => LocalizedString
+					/**
+					 * 4
+					 */
+					'4': () => LocalizedString
+					/**
+					 * 5 - Very comfortable
+					 */
+					'5': () => LocalizedString
+				}
+			}
+			LIFE_EVENTS: {
+				/**
+				 * Have you experienced one of these four life changing events in the past year? (Select all that apply)
+				 */
+				QUESTION: () => LocalizedString
+				OPTIONS: {
+					/**
+					 * Birth or adoption of a child
+					 */
+					BIRTH_ADOPTION: () => LocalizedString
+					/**
+					 * Married
+					 */
+					MARRIED: () => LocalizedString
+					/**
+					 * Divorced or separated
+					 */
+					DIVORCED: () => LocalizedString
+					/**
+					 * Death of a spouse
+					 */
+					SPOUSE_DEATH: () => LocalizedString
+				}
+			}
+			CHILD_CARE: {
+				/**
+				 * Do you regularly care for children other than your own who are age 6 or younger?
+				 */
+				QUESTION: () => LocalizedString
+			}
+			W9_1099: {
+				/**
+				 * Did you fill out a W9 to receive payment and/or did you receive a 1099?
+				 */
+				QUESTION: () => LocalizedString
+			}
+			SSN_ITIN: {
+				/**
+				 * Do you have a social security number or are you filing with an Individual Taxpayer Identification Number (ITIN)?
+				 */
+				QUESTION: () => LocalizedString
+				OPTIONS: {
+					/**
+					 * Social Security Number (SSN)
+					 */
+					SSN: () => LocalizedString
+					/**
+					 * Individual Taxpayer Identification Number (ITIN)
+					 */
+					ITIN: () => LocalizedString
+				}
+			}
+			FILING_YEAR: {
+				/**
+				 * Are you filing only for the 2025 tax year or are you filing for a different year or multiple years?
+				 */
+				QUESTION: () => LocalizedString
+				OPTIONS: {
+					/**
+					 * 2025 tax year only
+					 */
+					ONLY_2025: () => LocalizedString
+					/**
+					 * Different year or multiple years
+					 */
+					MULTIPLE: () => LocalizedString
+				}
+			}
+			LANGUAGE_ASSISTANCE: {
+				/**
+				 * Do you need assistance in a language other than English or Spanish?
+				 */
+				QUESTION: () => LocalizedString
+			}
+		}
+		OUTCOMES: {
+			IN_PERSON_GOOD_FIT: {
+				/**
+				 * In-person tax help is likely best for you. Click below to find a free tax help site and book an appointment early, if you can.
+				 */
+				COPY: () => LocalizedString
+				/**
+				 * FILE FOR FREE IN-PERSON
+				 */
+				BUTTON: () => LocalizedString
+			}
+			IN_PERSON_STILL_SUITED: {
+				/**
+				 * In-person tax help is likely best for you. Click below to find a free tax help site and book an appointment early, if you can.
+				 */
+				COPY: () => LocalizedString
+				/**
+				 * FILE FOR FREE IN-PERSON
+				 */
+				BUTTON: () => LocalizedString
+			}
+			ONLINE_WITH_SUPPORT: {
+				/**
+				 * Good news! Online tax filing may be a great fit for you. File online for free with help from a trained volunteer with the VITA program, so you can file with peace of mind and get your refund faster.
+				 */
+				COPY: () => LocalizedString
+				/**
+				 * FILE FOR FREE ONLINE WITH SUPPORT
+				 */
+				PRIMARY_BUTTON: () => LocalizedString
+				/**
+				 * Still want to see if there is capacity to help support you with free, in-person filing support? Click here
+				 */
+				IN_PERSON_LINK: () => LocalizedString
+			}
+			OPTIMIZED_DIY: {
+				/**
+				 * Good news! Online tax filing may be a great fit for you. File online for free with this optimized, do-it-yourself service and get access to your refund faster — often within 45 minutes after you file. Explore that DIY service below as well as two more supportive options.
+				 */
+				COPY: () => LocalizedString
+				BUTTONS: {
+					/**
+					 * OPTIMIZED & FREE DIY ONLINE FILING
+					 */
+					DIY: () => LocalizedString
+					/**
+					 * FILE ONLINE WITH SUPPORT FOR $25
+					 */
+					SUPPORT_25: () => LocalizedString
+					/**
+					 * OTHER PAID FILING OPTIONS WITH SUPPORT
+					 */
+					PAID: () => LocalizedString
+				}
+				/**
+				 * Still want to see if there is capacity to help support you with free, in-person filing support? Click here
+				 */
+				IN_PERSON_LINK: () => LocalizedString
+			}
+			ONLINE_AND_OTHER: {
+				/**
+				 * Good news! Online tax filing may be a great fit for you. Explore these options to file online, make taxes easier, and get your refund faster.
+				 */
+				COPY: () => LocalizedString
+				BUTTONS: {
+					/**
+					 * FILE FOR FREE ONLINE
+					 */
+					FREE_ONLINE: () => LocalizedString
+					/**
+					 * FILE ONLINE WITH SUPPORT FOR $25
+					 */
+					SUPPORT_25: () => LocalizedString
+					/**
+					 * OTHER PAID FILING OPTIONS WITH SUPPORT
+					 */
+					PAID: () => LocalizedString
+				}
+				/**
+				 * Still want to see if there is capacity to help support you with free, in-person filing support? Click here
+				 */
+				IN_PERSON_LINK: () => LocalizedString
+			}
+		}
+		/**
+		 * SEE MY OPTIONS
+		 */
+		SUBMIT_BUTTON: () => LocalizedString
+		/**
+		 * NEXT
+		 */
+		NEXT_BUTTON: () => LocalizedString
+		/**
+		 * BACK
+		 */
+		BACK_BUTTON: () => LocalizedString
+		/**
+		 * CLOSE
+		 */
+		CLOSE_BUTTON: () => LocalizedString
 	}
 }
 

@@ -15,5 +15,5 @@ export function entries() {
 		}
 	}
 
-	return prerenderOptions
+	return prerenderOptions;
 }

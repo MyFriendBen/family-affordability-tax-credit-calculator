@@ -2,10 +2,20 @@
 	import type { TaxCredit } from './mfbApi';
 	import t, { locale } from '$lib/i18n/i18n-svelte';
 	import { onMount } from 'svelte';
-	import { generateLinks, generateMfbLink, generateSavingsCollaborativeLink, type Links } from './whiteLabelData';
+	import {
+		generateLinks,
+		generateMfbLink,
+		generateSavingsCollaborativeLink,
+		type Links
+	} from './whiteLabelData';
 	import { page } from '$app/stores';
+	import FileInPersonQuiz from './FileInPersonQuiz.svelte';
 
 	export let taxCredits: TaxCredit[];
+	export let yearlyIncome: number = 0;
+	export let isCareWorker: boolean = false;
+
+	let showQuiz = false;
 
 	let total = 0;
 	$: total = taxCredits.reduce((acc, credit) => acc + credit.value, 0);
@@ -24,6 +34,7 @@
 		.sort((a, b) => b.value - a.value);
 
 	let container: HTMLElement;
+	let inPersonSection: HTMLElement;
 
 	onMount(() => {
 		container.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -42,6 +53,15 @@
 		// Generate link at click time to capture current Google Translate language
 		const link = generateSavingsCollaborativeLink($locale);
 		window.open(link, '_blank');
+	}
+
+	function handleFileInPersonClick(event: MouseEvent) {
+		event.preventDefault();
+		showQuiz = true;
+		// Give Svelte a tick to render the quiz, then scroll to it
+		setTimeout(() => {
+			inPersonSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}, 0);
 	}
 </script>
 
@@ -66,25 +86,6 @@
 					{/each}
 				</ul>
 			</div>
-
-			<!-- <div class="section"> -->
-			<!-- 	<h3 class="secondary-heading">{$t.RESULTS.REQUIRED_DOCUMENTS.TITLE()}</h3> -->
-			<!-- 	<ul> -->
-			<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.ID()}</li> -->
-			<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.SSN()}</li> -->
-			<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.BIRTH_DATES()}</li> -->
-			<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.W2()}</li> -->
-			<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.BANK_ACCOUNT()}</li> -->
-			<!-- 		<li>{$t.RESULTS.REQUIRED_DOCUMENTS.PRIOR_TAX_RETURNS()}</li> -->
-			<!-- 		<li> -->
-			<!-- 			{$t.RESULTS.REQUIRED_DOCUMENTS.IP_PIN()} -->
-			<!-- 			<a -->
-			<!-- 				href="http://irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin" -->
-			<!-- 				class="ip-pin-link">{$t.RESULTS.REQUIRED_DOCUMENTS.IP_PIN_LINK_TEXT()}</a -->
-			<!-- 			>. -->
-			<!-- 		</li> -->
-			<!-- 	</ul> -->
-			<!-- </div> -->
 		</div>
 	{/if}
 
@@ -92,16 +93,36 @@
 
 	<div class="section links">
 		<h3 class="primary-heading ways-to-file">{$t.RESULTS.FILE_FOR_FREE.TITLE()}</h3>
-		<div class="link-container">
-			<a href={links.fileOnline} target="_blank" class="primary-button"
-				>{$t.RESULTS.FILE_FOR_FREE.ONLINE()}</a
-			>
-		</div>
-		<div class="link-container">
-			<a href={links.fileInPerson} target="_blank" class="primary-button"
-				>{$t.RESULTS.FILE_FOR_FREE.IN_PERSON()}</a
-			>
-		</div>
+
+		<!-- FILE IN-PERSON: Button transforms to header when expanded -->
+		{#if showQuiz}
+			<div class="in-person-expanded" bind:this={inPersonSection}>
+				<div class="in-person-header-row">
+					<h4 class="in-person-header">{$t.RESULTS.FILE_FOR_FREE.IN_PERSON()}</h4>
+					<button type="button" class="close-button" on:click={() => (showQuiz = false)}>
+						{$t.FILE_IN_PERSON_QUIZ.CLOSE_BUTTON()}
+					</button>
+				</div>
+				<FileInPersonQuiz
+					{yearlyIncome}
+					{isCareWorker}
+					{whiteLabel}
+					onClose={() => (showQuiz = false)}
+				/>
+			</div>
+		{:else}
+			<div class="link-container">
+				<a href={links.fileOnline} target="_blank" class="primary-button"
+					>{$t.RESULTS.FILE_FOR_FREE.ONLINE()}</a
+				>
+			</div>
+			<div class="link-container">
+				<button type="button" class="primary-button" on:click={handleFileInPersonClick}
+					>{$t.RESULTS.FILE_FOR_FREE.IN_PERSON()}</button
+				>
+			</div>
+		{/if}
+
 		<h3 class="primary-heading other-filing-options ways-to-file">
 			{$t.RESULTS.OTHER_FILING_OPTIONS.TITLE()}
 		</h3>
@@ -202,6 +223,43 @@
 
 	.mfb-description {
 		text-align: center;
+	}
+
+	.in-person-expanded {
+		padding: 0.5em 0;
+	}
+
+	.in-person-header-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.5em 0;
+	}
+
+	.in-person-header {
+		color: var(--primary-color);
+		background-color: transparent;
+		font-size: 1.4em;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	.close-button {
+		padding: 0.4em 1em;
+		font-size: 0.9em;
+		font-weight: bold;
+		cursor: pointer;
+		text-transform: uppercase;
+		font-family: inherit;
+		border: 2px solid var(--primary-color);
+		background-color: transparent;
+		color: var(--primary-color);
+	}
+
+	.close-button:hover {
+		background-color: var(--primary-color);
+		color: white;
 	}
 
 	@media (min-width: 80rem) {

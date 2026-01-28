@@ -40,7 +40,6 @@
 		font-size: 0.8em;
 	}
 
-
 	label {
 		position: absolute;
 		top: 0.25em;
