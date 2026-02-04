@@ -5,10 +5,13 @@
 	import Results from '$lib/Results.svelte';
 	import { page } from '$app/stores';
 	import googleTranslateSelect from '$lib/googleTranslate';
+	import { calculateYearlyIncome } from '$lib/filingEligibility';
 
 	const mfbApi = new MfbApi();
 
 	let taxCredits: TaxCredit[] = [];
+	let yearlyIncome: number = 0;
+	let isCareWorker: boolean = false;
 
 	async function handleSubmit(
 		isMarried: boolean,
@@ -18,6 +21,8 @@
 		spouseIsCareWorker: boolean
 	) {
 		taxCredits = [];
+		yearlyIncome = calculateYearlyIncome(incomes);
+		isCareWorker = headIsCareWorker || spouseIsCareWorker;
 		mfbApi.updateData(isMarried, childAges, incomes, headIsCareWorker, spouseIsCareWorker);
 		await mfbApi.updateScreen();
 		taxCredits = await mfbApi.getResults();
@@ -34,7 +39,7 @@
 <Form {handleSubmit} />
 
 {#if mfbApi.uuid !== null && mfbApi.id !== null && taxCredits.length !== 0}
-	<Results {taxCredits} lang={$page.params.lang} />
+	<Results {taxCredits} {yearlyIncome} {isCareWorker} />
 {/if}
 
 <style>

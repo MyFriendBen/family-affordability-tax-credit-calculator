@@ -1,4 +1,4 @@
-import { updated } from "$app/stores";
+import { updated } from '$app/stores';
 
 export function selectOnFocus(node: HTMLInputElement) {
 	const listener = () => node.select();

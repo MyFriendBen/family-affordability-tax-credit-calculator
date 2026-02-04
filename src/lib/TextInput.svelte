@@ -16,34 +16,13 @@
 
 <span class:has-error={hasError}>
 	{#if type === 'email'}
-		<input
-			type="email"
-			bind:value
-			id={actualId}
-			placeholder=""
-			name={id}
-			use:selectOnFocus
-		/>
+		<input type="email" bind:value id={actualId} placeholder="" name={id} use:selectOnFocus />
 		<label for={actualId} style:color={hasError ? 'red' : ''}>{label}</label>
 	{:else if type === 'tel'}
-		<input
-			type="tel"
-			bind:value
-			id={actualId}
-			placeholder=""
-			name={id}
-			use:selectOnFocus
-		/>
+		<input type="tel" bind:value id={actualId} placeholder="" name={id} use:selectOnFocus />
 		<label for={actualId} style:color={hasError ? 'red' : ''}>{label}</label>
 	{:else}
-		<input
-			type="text"
-			bind:value
-			id={actualId}
-			placeholder=""
-			name={id}
-			use:selectOnFocus
-		/>
+		<input type="text" bind:value id={actualId} placeholder="" name={id} use:selectOnFocus />
 		<label for={actualId} style:color={hasError ? 'red' : ''}>{label}</label>
 	{/if}
 	{#if hasError}

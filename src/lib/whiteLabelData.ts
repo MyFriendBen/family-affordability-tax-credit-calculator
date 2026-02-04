@@ -122,8 +122,7 @@ export function generateLinks(lang: Locales, whiteLabel?: string): Links {
 		fileInPersonLink =
 			'https://docs.google.com/forms/d/e/1FAIpQLSeoBcGExQVk4v1DzXeo8BDvyx4vdQFstsoW9A9sUvAnvOb_zA/viewform';
 	} else if (whiteLabel === 'pueblo_united_way') {
-		fileInPersonLink =
-			'https://www.pueblounitedway.org/vita#file-in-person';
+		fileInPersonLink = 'https://www.pueblounitedway.org/vita#file-in-person';
 	} else if (whiteLabel === 'dabc') {
 		fileInPersonLink = 'https://denverabc.org/schedule/';
 	} else if (whiteLabel === '211colorado') {
@@ -168,9 +167,7 @@ export function generateMfbLink(lang: Locales, whiteLabel?: string) {
 export function getGoogleTranslateLanguage(): string | null {
 	if (typeof document === 'undefined') return null;
 
-	const cookie = document.cookie
-		.split('; ')
-		.find((row) => row.startsWith('googtrans='));
+	const cookie = document.cookie.split('; ').find((row) => row.startsWith('googtrans='));
 
 	if (!cookie) return null;
 
@@ -185,4 +182,64 @@ export function generateSavingsCollaborativeLink(lang: Locales) {
 	const googleTranslateLang = getGoogleTranslateLanguage();
 	const effectiveLang = googleTranslateLang || lang;
 	return `https://taxrefund.savingscollaborative.org/?lang=${effectiveLang}`;
+}
+
+/**
+ * Get the in-person filing link for a specific white label
+ * Used by the File In-Person Quiz outcomes
+ */
+export function getFileInPersonLink(whiteLabel: string): string {
+	switch (whiteLabel) {
+		case 'alg':
+			return 'https://docs.google.com/forms/d/e/1FAIpQLSeoBcGExQVk4v1DzXeo8BDvyx4vdQFstsoW9A9sUvAnvOb_zA/viewform';
+		case 'pueblo_united_way':
+			return 'https://www.pueblounitedway.org/vita#file-in-person';
+		case 'dabc':
+			return 'https://denverabc.org/schedule/';
+		case '211colorado':
+			return 'https://search.211colorado.org/search?terms=aarp%20tax%20aide&page=1&location=Colorado&taxonomy_code=332&service_area=colorado';
+		default:
+			// Get Ahead Colorado and all others
+			return 'https://www.getaheadcolorado.org/fileinperson/?utm_source=get_ahead&utm_medium=online&utm_campaign=calculator_logic_button_click';
+	}
+}
+
+/**
+ * Get Your Refund - online filing with VITA volunteer support
+ */
+export function getOnlineWithSupportLink(): string {
+	return 'https://www.getyourrefund.org/en/sign-up';
+}
+
+/**
+ * Get Your Refund DIY - optimized self-filing
+ */
+export function getDiyFilingLink(): string {
+	return 'https://www.getyourrefund.org/en/diy/file_yourself';
+}
+
+/**
+ * FreeTaxUSA - $25 filing option
+ */
+export function getFreeTaxUsaLink(): string {
+	return 'https://www.freetaxusa.com/';
+}
+
+/**
+ * MyFreeTaxes - free online filing
+ */
+export function getMyFreeTaxesLink(): string {
+	return 'https://myfreetaxes.com/';
+}
+
+/**
+ * Paid filing options page on MFB
+ */
+export function getPaidFilingOptionsLink(lang: Locales): string {
+	const baseUrl =
+		lang === 'es'
+			? 'https://co.myfriendben.org/opciones-de-presentacion-de-impuestos-pagados/'
+			: 'https://co.myfriendben.org/paid-tax-filing-options/';
+
+	return `${baseUrl}?utm_source=online&utm_medium=calculator&utm_campaign=paid_filing_options&utm_id=get_ahead&utm_term=${lang === 'es' ? 'spanish' : 'english'}&utm_content=mfb_page`;
 }

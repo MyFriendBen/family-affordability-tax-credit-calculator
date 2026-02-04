@@ -30,6 +30,7 @@ PUBLIC_MFB_FRONTEND_DOMAIN=http://localhost:3000
 ```
 
 You can copy these values from the `benefits-fe/.env` file:
+
 - `PUBLIC_MFB_API_KEY` = `REACT_APP_API_KEY`
 - `PUBLIC_MFB_DOMAIN` = `REACT_APP_DOMAIN_URL`
 - `PUBLIC_MFB_FRONTEND_DOMAIN` = URL where benefits-fe is running (typically `http://localhost:3000`)
@@ -101,6 +102,7 @@ npm run start
 ## White Label Support
 
 Each white label has custom colors and link configurations defined in `src/lib/whiteLabelData.ts`. The supported white labels are:
+
 - gac (Get Ahead Colorado)
 - pueblo_united_way
 - dabc
