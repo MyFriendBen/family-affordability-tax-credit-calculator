@@ -119,8 +119,7 @@ export function generateLinks(lang: Locales, whiteLabel?: string): Links {
 	let fileInPersonLink = `${baseLinks.fileInPerson}?utm_source=online&utm_medium=calculator&utm_campaign=file_for_free_in_person&utm_id=${whiteLabel}&utm_term=${language}&utm_content=gac_file_in_person`;
 
 	if (whiteLabel === 'alg') {
-		fileInPersonLink =
-			'https://docs.google.com/forms/d/e/1FAIpQLSeoBcGExQVk4v1DzXeo8BDvyx4vdQFstsoW9A9sUvAnvOb_zA/viewform';
+		fileInPersonLink = 'https://forms.gle/uimtJcuYqSKWiPp19';
 	} else if (whiteLabel === 'pueblo_united_way') {
 		fileInPersonLink = 'https://www.pueblounitedway.org/vita#file-in-person';
 	} else if (whiteLabel === 'dabc') {
@@ -191,7 +190,7 @@ export function generateSavingsCollaborativeLink(lang: Locales) {
 export function getFileInPersonLink(whiteLabel: string): string {
 	switch (whiteLabel) {
 		case 'alg':
-			return 'https://docs.google.com/forms/d/e/1FAIpQLSeoBcGExQVk4v1DzXeo8BDvyx4vdQFstsoW9A9sUvAnvOb_zA/viewform';
+			return 'https://forms.gle/uimtJcuYqSKWiPp19';
 		case 'pueblo_united_way':
 			return 'https://www.pueblounitedway.org/vita#file-in-person';
 		case 'dabc':
