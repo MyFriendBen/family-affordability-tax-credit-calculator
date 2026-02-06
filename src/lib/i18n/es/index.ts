@@ -98,13 +98,13 @@ const es = {
 		},
 		FILE_FOR_FREE: {
 			TITLE: 'PRESENTAR GRATIS',
-			ONLINE: 'PRESENTAR EN LÍNEA',
+			ONLINE_DIY: 'PRESENTAR EN LÍNEA - HÁGALO USTED MISMO',
 			IN_PERSON: 'PRESENTAR EN PERSONA'
 		},
 		OTHER_FILING_OPTIONS: {
 			TITLE: 'OTRAS OPCIONES DE PRESENTACIÓN',
-			PAID: 'OPCIONES DE PRESENTACIÓN PAGADAS',
-			FREE_TAX_USA: 'DECLARAR EN LÍNEA CON APOYO POR $25'
+			PAID: 'PREPARADORES PAGADOS',
+			FREE_TAX_USA: 'DECLARAR EN LÍNEA CON APOYO POR $16-$61'
 		},
 		DISCLAIMER:
 			'Según la información de ingresos que proporcionó, esta es la cantidad total de créditos para los que puede ser elegible. El reembolso final que reciba se basará en este número menos cualquier obligación que pueda tener. Los contribuyentes que reciben todo o la mayor parte de sus ingresos de un trabajo con salario W-2 probablemente recibirán casi todo el valor de estos créditos en un reembolso.',
@@ -201,7 +201,7 @@ const es = {
 				COPY: '¡Buenas noticias! Presentar impuestos en línea puede ser una excelente opción para usted. Presente en línea gratis con este servicio optimizado de hágalo usted mismo y obtenga acceso a su reembolso más rápido, a menudo dentro de los 45 minutos después de presentar. Explore ese servicio a continuación, así como dos opciones más con apoyo.',
 				BUTTONS: {
 					DIY: 'PRESENTACIÓN EN LÍNEA GRATUITA Y OPTIMIZADA',
-					SUPPORT_25: 'PRESENTAR EN LÍNEA CON APOYO POR $25',
+					SUPPORT_25: 'PRESENTAR EN LÍNEA CON APOYO POR $16-$61',
 					PAID: 'OTRAS OPCIONES DE PAGO CON APOYO'
 				},
 				IN_PERSON_LINK:
@@ -211,7 +211,7 @@ const es = {
 				COPY: '¡Buenas noticias! Presentar impuestos en línea puede ser una excelente opción para usted. Explore estas opciones para presentar en línea, facilitar sus impuestos y recibir su reembolso más rápido.',
 				BUTTONS: {
 					FREE_ONLINE: 'PRESENTAR GRATIS EN LÍNEA',
-					SUPPORT_25: 'PRESENTAR EN LÍNEA CON APOYO POR $25',
+					SUPPORT_25: 'PRESENTAR EN LÍNEA CON APOYO POR $16-$61',
 					PAID: 'OTRAS OPCIONES DE PAGO CON APOYO'
 				},
 				IN_PERSON_LINK:

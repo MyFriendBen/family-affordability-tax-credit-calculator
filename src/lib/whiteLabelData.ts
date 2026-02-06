@@ -218,7 +218,7 @@ export function getDiyFilingLink(): string {
 }
 
 /**
- * FreeTaxUSA - $25 filing option
+ * FreeTaxUSA - $16-$61 filing option
  */
 export function getFreeTaxUsaLink(): string {
 	return 'https://www.freetaxusa.com/';
