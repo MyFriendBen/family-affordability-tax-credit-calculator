@@ -98,13 +98,13 @@ const en = {
 		},
 		FILE_FOR_FREE: {
 			TITLE: 'FILE FOR FREE',
-			ONLINE: 'FILE ONLINE',
+			ONLINE_DIY: 'FILE ONLINE - DO IT YOURSELF',
 			IN_PERSON: 'FILE IN-PERSON'
 		},
 		OTHER_FILING_OPTIONS: {
 			TITLE: 'OTHER FILING OPTIONS',
-			PAID: 'PAID FILING OPTIONS',
-			FREE_TAX_USA: 'FILE ONLINE WITH SUPPORT FOR $25'
+			PAID: 'PAID PREPARERS',
+			FREE_TAX_USA: 'FILE ONLINE WITH SUPPORT FOR $16-$61'
 		},
 		DISCLAIMER:
 			'Based on the income information you provided, this is the total amount of credits you may be eligible for. The final refund you receive will be based on this number minus any liabilities you may owe. Filers who receive all or most of their income from a W-2 earning job will likely receive nearly all of the value of these credits in a refund.',
@@ -201,7 +201,7 @@ const en = {
 				COPY: 'Good news! Online tax filing may be a great fit for you. File online for free with this optimized, do-it-yourself service and get access to your refund faster — often within 45 minutes after you file. Explore that DIY service below as well as two more supportive options.',
 				BUTTONS: {
 					DIY: 'OPTIMIZED & FREE DIY ONLINE FILING',
-					SUPPORT_25: 'FILE ONLINE WITH SUPPORT FOR $25',
+					SUPPORT_25: 'FILE ONLINE WITH SUPPORT FOR $16-$61',
 					PAID: 'OTHER PAID FILING OPTIONS WITH SUPPORT'
 				},
 				IN_PERSON_LINK:
@@ -211,7 +211,7 @@ const en = {
 				COPY: 'Good news! Online tax filing may be a great fit for you. Explore these options to file online, make taxes easier, and get your refund faster.',
 				BUTTONS: {
 					FREE_ONLINE: 'FILE FOR FREE ONLINE',
-					SUPPORT_25: 'FILE ONLINE WITH SUPPORT FOR $25',
+					SUPPORT_25: 'FILE ONLINE WITH SUPPORT FOR $16-$61',
 					PAID: 'OTHER PAID FILING OPTIONS WITH SUPPORT'
 				},
 				IN_PERSON_LINK:

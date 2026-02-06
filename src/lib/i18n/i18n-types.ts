@@ -278,9 +278,9 @@ type RootTranslation = {
 			 */
 			TITLE: string
 			/**
-			 * F​I​L​E​ ​O​N​L​I​N​E
+			 * F​I​L​E​ ​O​N​L​I​N​E​ ​-​ ​D​O​ ​I​T​ ​Y​O​U​R​S​E​L​F
 			 */
-			ONLINE: string
+			ONLINE_DIY: string
 			/**
 			 * F​I​L​E​ ​I​N​-​P​E​R​S​O​N
 			 */
@@ -292,11 +292,11 @@ type RootTranslation = {
 			 */
 			TITLE: string
 			/**
-			 * P​A​I​D​ ​F​I​L​I​N​G​ ​O​P​T​I​O​N​S
+			 * P​A​I​D​ ​P​R​E​P​A​R​E​R​S
 			 */
 			PAID: string
 			/**
-			 * F​I​L​E​ ​O​N​L​I​N​E​ ​W​I​T​H​ ​S​U​P​P​O​R​T​ ​F​O​R​ ​$​2​5
+			 * F​I​L​E​ ​O​N​L​I​N​E​ ​W​I​T​H​ ​S​U​P​P​O​R​T​ ​F​O​R​ ​$​1​6​-​$​6​1
 			 */
 			FREE_TAX_USA: string
 		}
@@ -512,7 +512,7 @@ type RootTranslation = {
 					 */
 					DIY: string
 					/**
-					 * F​I​L​E​ ​O​N​L​I​N​E​ ​W​I​T​H​ ​S​U​P​P​O​R​T​ ​F​O​R​ ​$​2​5
+					 * F​I​L​E​ ​O​N​L​I​N​E​ ​W​I​T​H​ ​S​U​P​P​O​R​T​ ​F​O​R​ ​$​1​6​-​$​6​1
 					 */
 					SUPPORT_25: string
 					/**
@@ -536,7 +536,7 @@ type RootTranslation = {
 					 */
 					FREE_ONLINE: string
 					/**
-					 * F​I​L​E​ ​O​N​L​I​N​E​ ​W​I​T​H​ ​S​U​P​P​O​R​T​ ​F​O​R​ ​$​2​5
+					 * F​I​L​E​ ​O​N​L​I​N​E​ ​W​I​T​H​ ​S​U​P​P​O​R​T​ ​F​O​R​ ​$​1​6​-​$​6​1
 					 */
 					SUPPORT_25: string
 					/**
@@ -829,9 +829,9 @@ export type TranslationFunctions = {
 			 */
 			TITLE: () => LocalizedString
 			/**
-			 * FILE ONLINE
+			 * FILE ONLINE - DO IT YOURSELF
 			 */
-			ONLINE: () => LocalizedString
+			ONLINE_DIY: () => LocalizedString
 			/**
 			 * FILE IN-PERSON
 			 */
@@ -843,11 +843,11 @@ export type TranslationFunctions = {
 			 */
 			TITLE: () => LocalizedString
 			/**
-			 * PAID FILING OPTIONS
+			 * PAID PREPARERS
 			 */
 			PAID: () => LocalizedString
 			/**
-			 * FILE ONLINE WITH SUPPORT FOR $25
+			 * FILE ONLINE WITH SUPPORT FOR $16-$61
 			 */
 			FREE_TAX_USA: () => LocalizedString
 		}
@@ -1063,7 +1063,7 @@ export type TranslationFunctions = {
 					 */
 					DIY: () => LocalizedString
 					/**
-					 * FILE ONLINE WITH SUPPORT FOR $25
+					 * FILE ONLINE WITH SUPPORT FOR $16-$61
 					 */
 					SUPPORT_25: () => LocalizedString
 					/**
@@ -1087,7 +1087,7 @@ export type TranslationFunctions = {
 					 */
 					FREE_ONLINE: () => LocalizedString
 					/**
-					 * FILE ONLINE WITH SUPPORT FOR $25
+					 * FILE ONLINE WITH SUPPORT FOR $16-$61
 					 */
 					SUPPORT_25: () => LocalizedString
 					/**

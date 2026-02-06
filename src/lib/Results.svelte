@@ -113,7 +113,7 @@
 		{:else}
 			<div class="link-container">
 				<a href={links.fileOnline} target="_blank" class="primary-button"
-					>{$t.RESULTS.FILE_FOR_FREE.ONLINE()}</a
+					>{$t.RESULTS.FILE_FOR_FREE.ONLINE_DIY()}</a
 				>
 			</div>
 			<div class="link-container">
