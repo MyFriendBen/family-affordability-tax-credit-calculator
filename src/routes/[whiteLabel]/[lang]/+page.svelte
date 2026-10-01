@@ -1,6 +1,7 @@
 <script lang="ts">
 	import t from '$lib/i18n/i18n-svelte';
 	import Form from '$lib/Form.svelte';
+	import LanguageToggle from '$lib/LanguageToggle.svelte';
 	import MfbApi, { type IncomeType, type TaxCredit } from '$lib/mfbApi';
 	import Results from '$lib/Results.svelte';
 	import { page } from '$app/stores';
@@ -27,6 +28,8 @@
 		taxCredits = await mfbApi.getResults();
 	}
 </script>
+
+<LanguageToggle />
 
 <div class="header">
 	<h1 class="primary-heading">{$t.MAIN.TITLE()}</h1>
