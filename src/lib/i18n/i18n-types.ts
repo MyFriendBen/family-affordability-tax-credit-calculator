@@ -234,6 +234,12 @@ type RootTranslation = {
 			 */
 			co_tax_credit_care_worker: string
 		}
+		/**
+		 * T​h​e​s​e​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​f​o​r​ ​t​h​e​ ​{​p​r​i​o​r​Y​e​a​r​}​ ​t​a​x​ ​y​e​a​r​.​ ​Y​o​u​ ​c​a​n​ ​c​l​a​i​m​ ​t​h​i​s​ ​c​r​e​d​i​t​ ​o​n​ ​y​o​u​r​ ​{​p​r​i​o​r​Y​e​a​r​}​ ​t​a​x​ ​r​e​t​u​r​n​,​ ​e​v​e​n​ ​i​f​ ​y​o​u​ ​f​i​l​e​ ​i​t​ ​a​f​t​e​r​ ​t​h​e​ ​A​p​r​i​l​ ​1​5​,​ ​{​c​u​r​r​e​n​t​Y​e​a​r​}​ ​d​e​a​d​l​i​n​e​.
+		 * @param {string} currentYear
+		 * @param {string} priorYear
+		 */
+		PRIOR_TAX_YEAR_WARNING: RequiredParams<'currentYear' | 'priorYear' | 'priorYear'>
 		REQUIRED_DOCUMENTS: {
 			/**
 			 * R​e​q​u​i​r​e​d​ ​D​o​c​u​m​e​n​t​s​ ​t​o​ ​F​i​l​e​ ​T​a​x​e​s​:
@@ -785,6 +791,10 @@ export type TranslationFunctions = {
 			 */
 			co_tax_credit_care_worker: () => LocalizedString
 		}
+		/**
+		 * These results are for the {priorYear} tax year. You can claim this credit on your {priorYear} tax return, even if you file it after the April 15, {currentYear} deadline.
+		 */
+		PRIOR_TAX_YEAR_WARNING: (arg: { currentYear: string, priorYear: string }) => LocalizedString
 		REQUIRED_DOCUMENTS: {
 			/**
 			 * Required Documents to File Taxes:
