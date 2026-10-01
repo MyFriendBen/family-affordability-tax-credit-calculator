@@ -6,7 +6,7 @@ A SvelteKit application that helps Colorado families estimate their eligibility 
 
 - Node.js 18+
 - npm
-- Access to the MyFriendBen backend API (benefits-be)
+- Access to the MyFriendBen backend API ([benefits-api](https://github.com/MyFriendBen/benefits-api))
 
 ## Setup
 
@@ -25,15 +25,16 @@ PUBLIC_MFB_DOMAIN=http://localhost:8000
 PUBLIC_MFB_FRONTEND_DOMAIN=http://localhost:3000
 
 # Private environment variables (server-side only)
-# HubSpot API key - required for sign-up form integration
-# HUB_SPOT_API_KEY=your_hubspot_api_key_here
+# HubSpot API key for the sign-up form. Must be defined (any placeholder works
+# locally) or `npm run dev`/`npm run build` fails to import it.
+HUB_SPOT_API_KEY=your_hubspot_api_key_here
 ```
 
-You can copy these values from the `benefits-fe/.env` file:
+You can copy these values from the [benefits-calculator](https://github.com/MyFriendBen/benefits-calculator) `.env` file:
 
 - `PUBLIC_MFB_API_KEY` = `REACT_APP_API_KEY`
 - `PUBLIC_MFB_DOMAIN` = `REACT_APP_DOMAIN_URL`
-- `PUBLIC_MFB_FRONTEND_DOMAIN` = URL where benefits-fe is running (typically `http://localhost:3000`)
+- `PUBLIC_MFB_FRONTEND_DOMAIN` = URL where benefits-calculator is running (typically `http://localhost:3000`)
 
 3. Ensure the backend API is running at the URL specified in `PUBLIC_MFB_DOMAIN`.
 
@@ -58,6 +59,7 @@ The app will be available at `http://localhost:5173`.
 - http://localhost:5173/jeffco/en - Jefferson County
 - http://localhost:5173/adams/en - Adams County
 - http://localhost:5173/arapahoe/en - Arapahoe County
+- http://localhost:5173/211colorado/en - 211 Colorado
 
 ## Available Scripts
 
@@ -111,3 +113,13 @@ Each white label has custom colors and link configurations defined in `src/lib/w
 - jeffco
 - adams
 - arapahoe
+- 211colorado
+
+## Deployment
+
+Deploys are manual; merging to `main` does not deploy. The app runs on Heroku (`heroku/nodejs` buildpack, `npm run start`):
+
+- `baby-ben`: production, embedded as an iframe at https://www.getaheadcolorado.org/calculator
+- `baby-ben-staging`: staging
+
+Set the environment variables above as Heroku config vars, then push `main` to the app's Heroku git remote.
