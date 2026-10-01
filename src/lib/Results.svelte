@@ -50,7 +50,6 @@
 
 	function handleSavingsCollaborativeClick(event: MouseEvent) {
 		event.preventDefault();
-		// Generate link at click time to capture current Google Translate language
 		const link = generateSavingsCollaborativeLink($locale);
 		window.open(link, '_blank');
 	}
