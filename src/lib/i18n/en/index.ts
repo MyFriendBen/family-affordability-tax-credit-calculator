@@ -83,6 +83,8 @@ const en = {
 			co_tax_credit_fatc: 'Colorado Family Affordability Tax Credit:',
 			co_tax_credit_care_worker: 'Colorado Care Worker Tax Credit:'
 		},
+		PRIOR_TAX_YEAR_WARNING:
+			'These results are for the {priorYear:string} tax year. You can claim this credit on your {priorYear:string} tax return, even if you file it after the April 15, {currentYear:string} deadline.',
 		REQUIRED_DOCUMENTS: {
 			TITLE: 'Required Documents to File Taxes:',
 			ID: 'Photo ID (driver’s license, state ID, or passport).',

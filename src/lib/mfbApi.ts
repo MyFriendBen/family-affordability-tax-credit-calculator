@@ -9,7 +9,16 @@ export type IncomeType = {
 export type TaxCredit = {
 	id: TaxCreditId;
 	value: number;
+	/** The API decided these results are for last year's taxes (see PRIOR_TAX_YEAR_LABEL). */
+	isPriorTaxYear: boolean;
 };
+
+/**
+ * Label prefix of the API's prior-tax-year warning, `warning._prior_tax_year_<id>-message`.
+ * The API only sends it when the program is on last year's tax year; the text itself
+ * lives in this app's i18n files.
+ */
+const PRIOR_TAX_YEAR_LABEL = 'warning._prior_tax_year_';
 
 export type TaxCreditId =
 	| 'co_tax_credit_ctc'
@@ -103,7 +112,14 @@ export default class MfbApi {
 		const credits: TaxCredit[] = [];
 		for (const program of data.programs) {
 			if (this.TAX_CREDIT_NAMES.includes(program.external_name)) {
-				credits.push({ id: program.external_name, value: program.estimated_value });
+				credits.push({
+					id: program.external_name,
+					value: program.estimated_value,
+					isPriorTaxYear: (program.warning_messages ?? []).some(
+						(warning: { message: { label: string } }) =>
+							warning.message.label.startsWith(PRIOR_TAX_YEAR_LABEL)
+					)
+				});
 			}
 		}
 
