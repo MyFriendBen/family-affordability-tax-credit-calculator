@@ -82,6 +82,8 @@ const es = {
 			co_tax_credit_fatc: 'Crédito fiscal por asequibilidad familiar de Colorado:',
 			co_tax_credit_care_worker: 'Crédito fiscal para trabajadores de cuidado de Colorado:'
 		},
+		PRIOR_TAX_YEAR_WARNING:
+			'Estos resultados corresponden al año fiscal {priorYear}. Puede reclamar este crédito en su declaración de impuestos {priorYear}, incluso si la presenta después de la fecha límite del 15 de abril de {currentYear}.',
 		REQUIRED_DOCUMENTS: {
 			TITLE: 'Documentos requeridos para presentar impuestos:',
 			ID: 'Identificación con fotografía (licencia de conducir, identificación estatal o pasaporte).',

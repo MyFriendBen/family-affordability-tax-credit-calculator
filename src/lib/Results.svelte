@@ -33,6 +33,11 @@
 		.filter((credit) => credit.value > 0)
 		.sort((a, b) => b.value - a.value);
 
+	// The API checks the program is on last year's tax year; the years here follow
+	// today's date, as the MyFriendBen results page does.
+	const currentYear = new Date().getFullYear();
+	const taxYears = { priorYear: String(currentYear - 1), currentYear: String(currentYear) };
+
 	let container: HTMLElement;
 	let inPersonSection: HTMLElement;
 
@@ -81,7 +86,13 @@
 				<h3 class="secondary-heading">{$t.RESULTS.CREDITS_FOUND_TITLE(eligbleCredits.length)}</h3>
 				<ul>
 					{#each eligbleCredits as credit}
-						<li>{$t.RESULTS.CREDIT_NAMES[credit.id]()} {formatNumber(credit.value)}</li>
+						<li>
+							{$t.RESULTS.CREDIT_NAMES[credit.id]()}
+							{formatNumber(credit.value)}
+							{#if credit.isPriorTaxYear}
+								<p class="credit-warning">{$t.RESULTS.PRIOR_TAX_YEAR_WARNING(taxYears)}</p>
+							{/if}
+						</li>
 					{/each}
 				</ul>
 			</div>
@@ -196,6 +207,12 @@
 
 	li {
 		padding: 0.2em 0;
+	}
+
+	.credit-warning {
+		margin: 0.25em 0 0.5em;
+		font-size: 0.9em;
+		font-style: italic;
 	}
 
 	/* .ip-pin-link { */
